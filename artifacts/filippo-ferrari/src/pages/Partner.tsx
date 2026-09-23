@@ -25,29 +25,29 @@ const fiscalBenefits = [
   "Possibilità di integrare la partnership nelle strategie marketing e commerciali dell'azienda.",
 ];
 
-const scanSteps = [
-  {
-    number: "01",
-    title: "Il QR",
-    text: "Durante gli eventi selezionati, il QR di Scan The Race può essere utilizzato sulla vettura e sui canali collegati al progetto.",
-  },
-  {
-    number: "02",
-    title: "La pagina partner",
-    text: "La scansione apre una pagina dedicata alle aziende che partecipano all'iniziativa, rendendo semplice scoprire i partner.",
-  },
-  {
-    number: "03",
-    title: "L'attivazione",
-    text: "Ogni azienda può mettere in evidenza un codice sconto, un'offerta, un servizio, un prodotto o un contenuto concordato.",
-  },
-];
-
 const values = [
   { title: "Professionalità", desc: "Un approccio serio e strutturato a ogni aspetto della carriera, in pista e fuori." },
   { title: "Miglioramento Continuo", desc: "Ogni gara è un'opportunità di crescita tecnica e umana." },
   { title: "Trasparenza", desc: "Rapporti basati sulla fiducia reciproca con partner e team." },
   { title: "Spirito di Squadra", desc: "Nessun pilota vince da solo: il successo è condiviso." },
+];
+
+const scanSteps = [
+  {
+    number: "01",
+    title: "Scansiona",
+    text: "Il QR di Scan The Race può essere presente sulla vettura e sui touchpoint collegati al progetto durante gli eventi selezionati.",
+  },
+  {
+    number: "02",
+    title: "Scegli il partner",
+    text: "La scansione apre una pagina dedicata alle aziende che partecipano all'iniziativa, rendendo immediato scoprire i partner.",
+  },
+  {
+    number: "03",
+    title: "Attiva l'offerta",
+    text: "Ogni azienda può mettere in evidenza un codice sconto, un'offerta, un servizio, un prodotto o un contenuto dedicato.",
+  },
 ];
 
 export default function Partner() {
@@ -201,7 +201,6 @@ export default function Partner() {
         </div>
       </section>
 
-
       {/* Scan The Race */}
       <section
         id="scan-the-race"
@@ -209,16 +208,23 @@ export default function Partner() {
         className="py-20 md:py-24 bg-black border-y border-white/5 scroll-mt-24"
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className={`grid lg:grid-cols-[0.8fr_1.2fr] gap-12 lg:gap-16 items-start opacity-0 ${scanRef.visible ? "animate-fadeInUp" : ""}`}>
+          <div className={`grid lg:grid-cols-[0.88fr_1.12fr] gap-12 lg:gap-16 items-start opacity-0 ${scanRef.visible ? "animate-fadeInUp" : ""}`}>
             <div>
-              <div className="divider-red mb-5" />
-              <div className="text-xs uppercase tracking-[0.22em] text-red-400 font-semibold mb-4">
-                Scan The Race
+              <div className="inline-flex items-center gap-3 px-4 py-3 rounded-2xl border border-red-500/20 bg-red-950/15 mb-6">
+                <div className="w-10 h-10 rounded-xl bg-red-600/15 border border-red-500/20 flex items-center justify-center">
+                  <QrCode size={20} className="text-red-400" />
+                </div>
+                <div>
+                  <div className="text-white font-black tracking-[0.16em] text-sm md:text-base">SCAN THE RACE</div>
+                  <div className="text-gray-500 text-[11px] uppercase tracking-[0.18em]">Partner activation concept</div>
+                </div>
               </div>
+
+              <div className="divider-red mb-5" />
               <h2 className="text-3xl md:text-5xl font-black text-white leading-tight mb-6">
                 Dalla visibilità
                 <br />
-                <span className="text-gradient">all'interazione.</span>
+                <span className="text-gradient">all'interazione concreta.</span>
               </h2>
               <div className="space-y-4 text-gray-300 leading-relaxed">
                 <p>
@@ -236,43 +242,106 @@ export default function Partner() {
                 </p>
               </div>
 
-              <Link href="/contatti">
-                <span className="mt-8 inline-flex items-center gap-2 px-6 py-3.5 btn-red rounded font-semibold cursor-pointer">
-                  Parliamo di Scan The Race <ArrowRight size={17} />
-                </span>
-              </Link>
+              <div className="mt-8 flex flex-col sm:flex-row gap-3">
+                <Link href="/contatti">
+                  <span className="inline-flex items-center justify-center gap-2 px-6 py-3.5 btn-red rounded font-semibold cursor-pointer">
+                    Parliamo di Scan The Race <ArrowRight size={17} />
+                  </span>
+                </Link>
+                <a
+                  href="#scan-demo"
+                  className="inline-flex items-center justify-center px-6 py-3.5 bg-white/10 border border-white/15 hover:bg-white/15 text-white rounded font-semibold transition-all"
+                >
+                  Vedi la demo
+                </a>
+              </div>
             </div>
 
-            <div className="rounded-2xl border border-red-500/20 bg-red-950/10 p-6 md:p-8">
-              <div className="flex items-center gap-3 mb-8">
-                <div className="w-12 h-12 rounded-xl bg-red-600/15 border border-red-500/25 flex items-center justify-center">
-                  <QrCode size={24} className="text-red-400" />
-                </div>
-                <div>
-                  <div className="text-white font-bold text-lg">Come funziona</div>
-                  <div className="text-gray-500 text-sm">
-                    Un percorso semplice, pensato per il pubblico e per il partner.
+            <div id="scan-demo" className="space-y-5">
+              <div className="rounded-2xl border border-red-500/20 bg-red-950/10 p-6 md:p-8">
+                <div className="flex items-center justify-between gap-4 mb-6">
+                  <div>
+                    <div className="text-white font-bold text-lg">Piccola demo illustrativa</div>
+                    <div className="text-gray-500 text-sm">Il flusso partner-publico in tre passaggi.</div>
                   </div>
+                  <div className="text-[10px] uppercase tracking-[0.2em] text-red-400 font-semibold">Demo</div>
                 </div>
-              </div>
 
-              <div className="grid sm:grid-cols-3 gap-4">
-                {scanSteps.map((step) => (
-                  <div
-                    key={step.number}
-                    className="card-hover rounded-xl border border-white/8 bg-black/35 p-5"
-                  >
-                    <div className="text-red-400 text-xs font-black tracking-[0.18em] mb-5">
-                      {step.number}
+                <div className="grid sm:grid-cols-3 gap-4">
+                  {scanSteps.map((step) => (
+                    <div
+                      key={step.number}
+                      className="card-hover rounded-xl border border-white/8 bg-black/35 p-5"
+                    >
+                      <div className="text-red-400 text-xs font-black tracking-[0.18em] mb-5">
+                        {step.number}
+                      </div>
+                      <h3 className="text-white font-bold mb-2">{step.title}</h3>
+                      <p className="text-gray-400 text-sm leading-relaxed">{step.text}</p>
                     </div>
-                    <h3 className="text-white font-bold mb-2">{step.title}</h3>
-                    <p className="text-gray-400 text-sm leading-relaxed">{step.text}</p>
-                  </div>
-                ))}
+                  ))}
+                </div>
               </div>
 
-              <p className="text-gray-500 text-xs leading-relaxed mt-6">
-                Formato, presenza del QR e contenuti vengono definiti in funzione dell'evento e della partnership.
+              <div className="rounded-2xl border border-white/8 bg-[hsl(0_0%_7%)] overflow-hidden">
+                <div className="h-10 border-b border-white/8 bg-white/5 flex items-center px-4 gap-2">
+                  <span className="w-2.5 h-2.5 rounded-full bg-red-500/80" />
+                  <span className="w-2.5 h-2.5 rounded-full bg-white/30" />
+                  <span className="w-2.5 h-2.5 rounded-full bg-white/20" />
+                  <div className="ml-3 text-xs text-gray-500 tracking-wide">scantherace.partner-demo</div>
+                </div>
+                <div className="p-5 md:p-6">
+                  <div className="flex items-center gap-3 mb-5">
+                    <div className="w-11 h-11 rounded-xl bg-red-600/15 border border-red-500/25 flex items-center justify-center">
+                      <QrCode size={22} className="text-red-400" />
+                    </div>
+                    <div>
+                      <div className="text-white font-black tracking-[0.12em]">SCAN THE RACE</div>
+                      <div className="text-gray-500 text-xs">Esempio di pagina partner</div>
+                    </div>
+                  </div>
+
+                  <div className="grid sm:grid-cols-[1.1fr_0.9fr] gap-4">
+                    <div className="rounded-xl border border-white/8 bg-black/35 p-4">
+                      <div className="text-xs uppercase tracking-[0.18em] text-gray-500 mb-3">Partner presenti</div>
+                      <div className="grid grid-cols-2 gap-3">
+                        <div className="rounded-lg border border-red-500/20 bg-red-950/10 p-4 text-center">
+                          <div className="text-white font-semibold text-sm">Brand A</div>
+                          <div className="text-gray-500 text-xs mt-1">Scopri l'iniziativa</div>
+                        </div>
+                        <div className="rounded-lg border border-white/8 bg-white/5 p-4 text-center">
+                          <div className="text-white font-semibold text-sm">Brand B</div>
+                          <div className="text-gray-500 text-xs mt-1">Offerta dedicata</div>
+                        </div>
+                        <div className="rounded-lg border border-white/8 bg-white/5 p-4 text-center">
+                          <div className="text-white font-semibold text-sm">Brand C</div>
+                          <div className="text-gray-500 text-xs mt-1">Codice promo</div>
+                        </div>
+                        <div className="rounded-lg border border-white/8 bg-white/5 p-4 text-center">
+                          <div className="text-white font-semibold text-sm">Brand D</div>
+                          <div className="text-gray-500 text-xs mt-1">Contenuto speciale</div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="rounded-xl border border-red-500/18 bg-red-950/10 p-4">
+                      <div className="text-xs uppercase tracking-[0.18em] text-red-400 mb-3">Esempio attivazione</div>
+                      <div className="text-white font-bold text-lg mb-1">Brand A</div>
+                      <div className="text-gray-400 text-sm mb-4">Offerta o contenuto scelto dall'azienda.</div>
+                      <div className="rounded-lg border border-white/10 bg-black/35 p-4 mb-4">
+                        <div className="text-gray-500 text-xs uppercase tracking-[0.16em] mb-1">Codice</div>
+                        <div className="text-white font-black tracking-[0.14em] text-lg">FILIPPO10</div>
+                      </div>
+                      <div className="w-full rounded-lg bg-red-600 hover:bg-red-500 transition-colors text-center py-3 text-sm font-semibold text-white">
+                        Attiva l'offerta
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <p className="text-gray-500 text-xs leading-relaxed">
+                Demo illustrativa: formato, presenza del QR e contenuti vengono definiti in funzione dell'evento e della partnership.
               </p>
             </div>
           </div>
@@ -412,11 +481,19 @@ export default function Partner() {
             <br className="hidden md:block" />
             Ogni traguardo raggiunto è una conquista condivisa.
           </p>
-          <Link href="/contatti">
-            <span className="inline-block px-12 py-4 btn-red rounded font-semibold text-lg cursor-pointer">
-              Contattami
-            </span>
-          </Link>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link href="/contatti">
+              <span className="inline-block px-12 py-4 btn-red rounded font-semibold text-lg cursor-pointer">
+                Contattami
+              </span>
+            </Link>
+            <a
+              href="#scan-the-race"
+              className="inline-flex items-center justify-center px-12 py-4 bg-white/10 border border-white/20 hover:border-red-500/50 hover:bg-white/15 text-white rounded font-semibold text-lg transition-all"
+            >
+              Scan The Race
+            </a>
+          </div>
         </div>
       </section>
     </>
