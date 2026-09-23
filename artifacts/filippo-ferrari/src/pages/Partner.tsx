@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Link } from "wouter";
 import { ArrowRight, CheckCircle, QrCode } from "lucide-react";
 import { useIntersection } from "@/hooks/useIntersection";
@@ -56,6 +57,27 @@ export default function Partner() {
   const scanRef = useIntersection();
   const fiscalRef = useIntersection();
   const valuesRef = useIntersection();
+
+  useEffect(() => {
+    const scrollToHash = () => {
+      if (window.location.hash !== "#scan-the-race") return;
+      document.getElementById("scan-the-race")?.scrollIntoView({
+        behavior: "auto",
+        block: "start",
+      });
+    };
+
+    scrollToHash();
+    const first = window.setTimeout(scrollToHash, 80);
+    const second = window.setTimeout(scrollToHash, 320);
+    window.addEventListener("hashchange", scrollToHash);
+
+    return () => {
+      window.clearTimeout(first);
+      window.clearTimeout(second);
+      window.removeEventListener("hashchange", scrollToHash);
+    };
+  }, []);
 
   return (
     <>

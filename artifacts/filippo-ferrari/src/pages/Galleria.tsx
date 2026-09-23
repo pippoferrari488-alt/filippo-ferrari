@@ -1,8 +1,9 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
 import { useIntersection } from "@/hooks/useIntersection";
 
 const BASE = "https://yourbrand-18274.kxcdn.com/lib/dadcg8/";
+const HERO_BG = BASE + "99_cola_moncini_vanberlo_401-XL-mkubenqb.jpg";
 
 const images = [
   { src: "https://yourbrand-18274.kxcdn.com/files/dynamicContent/sites/dadcg8/images/it/webpage_25/mm3aqfhw/element_657/0/IMG_8727-mky6kak2.webp", full: "https://yourbrand-18274.kxcdn.com/lib/dadcg8/IMG_8727-mky6kak2-mkymhyxu.jpeg" },
@@ -52,7 +53,6 @@ const images = [
 
 export default function Galleria() {
   const [lightbox, setLightbox] = useState<number | null>(null);
-  const [visible, setVisible] = useState<Record<number, boolean>>({});
   const headerRef = useIntersection();
 
   const open = (i: number) => setLightbox(i);
@@ -62,52 +62,100 @@ export default function Galleria() {
   const next = () =>
     setLightbox((l) => (l !== null ? (l + 1) % images.length : null));
 
-  const handleKeyDown = (e: React.KeyboardEvent) => {
-    if (e.key === "Escape") close();
-    if (e.key === "ArrowLeft") prev();
-    if (e.key === "ArrowRight") next();
-  };
+  useEffect(() => {
+    if (lightbox === null) return;
+
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setLightbox(null);
+      if (e.key === "ArrowLeft") {
+        setLightbox((l) =>
+          l !== null ? (l - 1 + images.length) % images.length : null
+        );
+      }
+      if (e.key === "ArrowRight") {
+        setLightbox((l) =>
+          l !== null ? (l + 1) % images.length : null
+        );
+      }
+    };
+
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    window.addEventListener("keydown", onKeyDown);
+
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      window.removeEventListener("keydown", onKeyDown);
+    };
+  }, [lightbox]);
 
   return (
     <>
       {/* Hero */}
-      <section className="relative pt-28 pb-14 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-red-950/20 to-transparent" />
-        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-red-700 via-red-500 to-red-700" />
+      <section className="relative h-[45vh] min-h-[320px] flex items-end overflow-hidden">
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: `url(${HERO_BG})` }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/88 via-black/58 to-black/25" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-transparent to-black/25" />
+        <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-red-500 to-transparent" />
         <div
           ref={headerRef.ref as React.RefObject<HTMLDivElement>}
-          className={`relative z-10 text-center opacity-0 ${headerRef.visible ? "animate-fadeInUp" : ""}`}
+          className={`relative z-10 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 pb-12 md:pb-14 opacity-0 ${
+            headerRef.visible ? "animate-fadeInUp" : ""
+          }`}
         >
-          <div className="divider-red mx-auto mb-4" />
+          <div className="text-xs uppercase tracking-[0.22em] text-red-400 font-semibold mb-4">
+            Media
+          </div>
           <h1 className="text-4xl md:text-6xl font-black text-white mb-4">
             <span className="text-gradient">Galleria</span>
           </h1>
-          <p className="text-gray-400 max-w-xl mx-auto">
-            Momenti, emozioni e adrenalina catturati in pista. Clicca su una foto per ingrandirla.
+          <p className="text-gray-300 text-base md:text-lg max-w-2xl leading-relaxed">
+            Una selezione di immagini dal percorso sportivo, tra pista, paddock e momenti vissuti nel motorsport.
           </p>
         </div>
       </section>
 
       {/* Grid */}
-      <section className="pb-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-16 md:py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2">
+          <div className="mb-10 md:mb-12">
+            <div className="divider-red mb-4" />
+            <div className="text-xs uppercase tracking-[0.22em] text-red-400 font-semibold mb-3">
+              Photo Selection
+            </div>
+            <h2 className="text-2xl md:text-4xl font-black text-white">
+              Momenti dal <span className="text-gradient">percorso</span>
+            </h2>
+            <p className="text-gray-400 mt-3 max-w-2xl leading-relaxed">
+              Apri un'immagine per visualizzarla a pieno formato e scorrere l'intera selezione.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4">
             {images.map((img, i) => (
               <button
                 key={i}
                 onClick={() => open(i)}
-                className="gallery-item rounded-lg overflow-hidden focus:outline-none focus:ring-2 focus:ring-red-500"
-                style={{ aspectRatio: "1/1" }}
+                aria-label={`Apri foto ${i + 1}`}
+                className="gallery-item group relative rounded-xl overflow-hidden border border-white/5 bg-white/[0.02] focus:outline-none focus:ring-2 focus:ring-red-500 transition-all duration-300 hover:border-red-500/35 hover:-translate-y-1"
+                style={{ aspectRatio: i % 9 === 0 ? "4/5" : "1/1" }}
               >
                 <img
                   src={img.src}
-                  alt={`Filippo Ferrari ${i + 1}`}
+                  alt={`Filippo Ferrari - immagine ${i + 1}`}
                   className="img-cover"
-                  loading="lazy"
+                  loading={i < 6 ? "eager" : "lazy"}
                   onError={(e) => {
                     (e.target as HTMLImageElement).closest("button")!.style.display = "none";
                   }}
                 />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="absolute left-3 bottom-3 text-[10px] font-semibold tracking-[0.16em] uppercase text-white/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  Apri
+                </div>
               </button>
             ))}
           </div>
@@ -119,18 +167,21 @@ export default function Galleria() {
         <div
           className="fixed inset-0 z-50 bg-black/95 lightbox flex items-center justify-center p-4"
           onClick={close}
-          onKeyDown={handleKeyDown}
-          tabIndex={0}
+          role="dialog"
+          aria-modal="true"
+          aria-label="Visualizzazione foto"
         >
           <button
             onClick={close}
-            className="absolute top-4 right-4 text-white/70 hover:text-white transition-colors z-10"
+            aria-label="Chiudi foto"
+            className="absolute top-4 right-4 w-11 h-11 rounded-full bg-white/10 hover:bg-red-600 flex items-center justify-center text-white transition-colors z-10"
           >
             <X size={28} />
           </button>
           <button
             onClick={(e) => { e.stopPropagation(); prev(); }}
-            className="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/10 hover:bg-red-600 flex items-center justify-center text-white transition-colors z-10"
+            aria-label="Foto precedente"
+            className="absolute left-3 md:left-6 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-white/10 hover:bg-red-600 flex items-center justify-center text-white transition-colors z-10"
           >
             <ChevronLeft size={20} />
           </button>
@@ -146,11 +197,12 @@ export default function Galleria() {
           />
           <button
             onClick={(e) => { e.stopPropagation(); next(); }}
-            className="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/10 hover:bg-red-600 flex items-center justify-center text-white transition-colors z-10"
+            aria-label="Foto successiva"
+            className="absolute right-3 md:right-6 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-white/10 hover:bg-red-600 flex items-center justify-center text-white transition-colors z-10"
           >
             <ChevronRight size={20} />
           </button>
-          <div className="absolute bottom-4 left-1/2 -translate-x-1/2 text-gray-400 text-sm">
+          <div className="absolute bottom-4 left-1/2 -translate-x-1/2 px-3 py-1.5 rounded-full bg-black/55 border border-white/10 text-gray-300 text-xs tracking-wider">
             {lightbox + 1} / {images.length}
           </div>
         </div>
