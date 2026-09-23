@@ -13,11 +13,17 @@ const navLinks = [
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [progress, setProgress] = useState(0);
   const [location] = useLocation();
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 20);
-    window.addEventListener("scroll", onScroll);
+    const onScroll = () => {
+      setScrolled(window.scrollY > 20);
+      const max = document.documentElement.scrollHeight - window.innerHeight;
+      setProgress(max > 0 ? Math.min(100, (window.scrollY / max) * 100) : 0);
+    };
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
@@ -46,7 +52,7 @@ export default function Navbar() {
                   Filippo <span className="text-red-500">Ferrari</span>
                 </span>
                 <div className="text-[10px] text-gray-400 tracking-[0.18em] uppercase">
-                  GT Racing Driver
+                  Racing Driver
                 </div>
               </div>
             </div>
@@ -82,6 +88,12 @@ export default function Navbar() {
           </button>
         </div>
       </div>
+
+      <div
+        className="absolute bottom-0 left-0 h-px bg-red-500/90 transition-[width] duration-100"
+        style={{ width: `${progress}%` }}
+        aria-hidden="true"
+      />
 
       {open && (
         <div className="md:hidden mobile-menu-enter nav-glass border-t border-white/10">

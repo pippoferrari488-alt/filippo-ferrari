@@ -5,10 +5,10 @@ import { useIntersection } from "@/hooks/useIntersection";
 const HERO_BG = "https://dadcg8.webwave.dev/files/dynamicContent/sites/dadcg8/images/it/webpage_31/mm3aqecy/element_815/rwdMode_1/2400x420/a-race-car-driving-down-a-race-track.webp";
 
 const faqs = [
-  { q: "Come posso seguire la carriera di Filippo Ferrari?", a: "Puoi accedere a contenuti esclusivi sui social." },
-  { q: "Quali sono i vantaggi di diventare uno sponsor?", a: "Avrai visibilità e un approccio professionale." },
-  { q: "In quali competizioni partecipa Filippo Ferrari?", a: "Filippo Ferrari è un pilota GT3 attivo nel Campionato Italiano Gran Turismo." },
-  { q: "Qual è l approccio di Filippo Ferrari alla carriera?", a: "Approccio professionale con mentalità orientata alla vittoria." },
+  { q: "Come posso seguire Filippo Ferrari?", a: "Il sito raccoglie il profilo e le principali tappe del percorso; per gli aggiornamenti più frequenti puoi seguire i canali Instagram e TikTok." },
+  { q: "Qual è il prossimo programma sportivo?", a: "I programmi futuri vengono comunicati solo quando sono definiti. La sezione The Next Chapter racconta la direzione del percorso senza legarla a una stagione specifica." },
+  { q: "Come posso proporre una partnership?", a: "Puoi utilizzare il form o i contatti diretti indicando azienda, obiettivi e tipo di collaborazione che vorresti valutare." },
+  { q: "Per quali richieste posso contattare Filippo?", a: "Opportunità sportive, partnership commerciali, richieste media e collaborazioni professionali." },
 ];
 
 function FaqItem({ q, a }: { q: string; a: string }) {
@@ -78,15 +78,15 @@ export default function Contatti() {
           <div className="grid lg:grid-cols-2 gap-16">
             <div ref={formRef.ref as React.RefObject<HTMLDivElement>} className={`opacity-0 ${formRef.visible ? "animate-slideInLeft" : ""}`}>
               <div className="divider-red mb-5" />
-              <h2 className="text-3xl font-black text-white mb-2">Hai altre domande? <span className="text-gradient">Contattami!</span></h2>
-              <p className="text-gray-400 mb-8 text-sm">Compila il form e ti risponderò il prima possibile.</p>
+              <h2 className="text-3xl font-black text-white mb-2">Parliamone<span className="text-gradient">.</span></h2>
+              <p className="text-gray-400 mb-8 text-sm">Per opportunità sportive, partnership, media e collaborazioni professionali.</p>
               {status === "sent" ? (
                 <div className="bg-red-950/30 border border-red-500/30 rounded-xl p-8 text-center">
                   <div className="w-14 h-14 rounded-full bg-red-600 flex items-center justify-center mx-auto mb-4">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.5} className="w-7 h-7 text-white"><polyline points="20 6 9 17 4 12" /></svg>
                   </div>
                   <h3 className="text-white font-bold text-xl mb-2">Messaggio inviato!</h3>
-                  <p className="text-gray-400 text-sm">Grazie! Ti risponderò presto.</p>
+                  <p className="text-gray-400 text-sm">Grazie per il messaggio. Ti risponderò appena possibile.</p>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-5">
@@ -104,7 +104,7 @@ export default function Contatti() {
                   </div>
                   <div className="flex items-start gap-3">
                     <input type="checkbox" id="gdpr" checked={gdpr} onChange={(e) => setGdpr(e.target.checked)} className="mt-1 w-4 h-4 accent-red-600" />
-                    <label htmlFor="gdpr" className="text-gray-500 text-xs leading-relaxed">Accettazione GDPR * — Inviando il messaggio acconsento a che questo sito conservi le informazioni inviate così che possano rispondere alla mia richiesta.</label>
+                    <label htmlFor="gdpr" className="text-gray-500 text-xs leading-relaxed">Accettazione GDPR * — Inviando il messaggio acconsento a che questo sito conservi le informazioni inviate così che possa essere gestita la mia richiesta.</label>
                   </div>
                   {status === "error" && <p className="text-red-400 text-xs">Si prega di compilare tutti i campi obbligatori!</p>}
                   <button type="submit" className="w-full py-4 btn-red rounded-lg font-semibold text-white tracking-wide">Invia</button>
@@ -114,7 +114,7 @@ export default function Contatti() {
 
             <div ref={infoRef.ref as React.RefObject<HTMLDivElement>} className={`opacity-0 ${infoRef.visible ? "animate-slideInRight delay-200" : ""}`}>
               <div className="divider-red mb-5" />
-              <h2 className="text-3xl font-black text-white mb-8">Come <span className="text-gradient">trovarmi</span></h2>
+              <h2 className="text-3xl font-black text-white mb-8">Contatti <span className="text-gradient">diretti</span></h2>
               <div className="space-y-6 mb-10">
                 <div className="flex items-start gap-4 card-hover bg-[hsl(0_0%_7%)] border border-white/5 rounded-xl p-5">
                   <div className="w-10 h-10 rounded-full bg-red-600/20 flex items-center justify-center shrink-0"><Phone size={18} className="text-red-400" /></div>
@@ -126,7 +126,7 @@ export default function Contatti() {
                 </div>
                 <div className="flex items-start gap-4 card-hover bg-[hsl(0_0%_7%)] border border-white/5 rounded-xl p-5">
                   <div className="w-10 h-10 rounded-full bg-red-600/20 flex items-center justify-center shrink-0"><MapPin size={18} className="text-red-400" /></div>
-                  <div><div className="text-gray-500 text-xs uppercase tracking-widest mb-1">Indirizzo</div><span className="text-white font-semibold">Piazza G. Agnelli 10</span><div className="text-gray-400 text-sm">Roma, 00144</div></div>
+                  <div><div className="text-gray-500 text-xs uppercase tracking-widest mb-1">Base</div><span className="text-white font-semibold">Roma, Italia</span></div>
                 </div>
               </div>
               <div>

@@ -21,12 +21,12 @@ export default function Footer() {
                   Filippo <span className="text-red-500">Ferrari</span>
                 </div>
                 <div className="text-[10px] text-gray-500 tracking-[0.18em] uppercase">
-                  GT Racing Driver
+                  Racing Driver
                 </div>
               </div>
             </div>
             <p className="text-gray-500 text-sm leading-relaxed">
-              Motorsport, crescita professionale e partnership costruite con una visione di lungo periodo.
+              Passione, professionalità e voglia di vincere. In pista, un capitolo alla volta.
             </p>
           </div>
 

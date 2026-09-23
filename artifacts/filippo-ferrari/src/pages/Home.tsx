@@ -24,29 +24,29 @@ const profile = [
   { label: "Nazionalità", value: "ITA" },
   { label: "Anno di nascita", value: "2005" },
   { label: "Licenza", value: "ACI Sport" },
-  { label: "Percorso", value: "Kart → GT" },
+  { label: "Percorso", value: "Kart → Turismo → GT" },
 ];
 
 const experience = [
   {
     year: "2012",
     title: "Karting",
-    text: "Inizio del percorso sportivo a sette anni, con esperienza nelle categorie 60 Mini, 125 monomarcia e KZ.",
+    text: "A sette anni inizia con il karting, passando nel tempo dalle categorie 60 Mini alle 125 monomarcia e KZ.",
   },
   {
     year: "2021",
     title: "Clio Cup",
-    text: "Debutto nelle competizioni automobilistiche e primo passaggio strutturato dalle monoposto kart alle vetture turismo.",
+    text: "Debutto nelle competizioni automobilistiche con una Clio Cup: il primo capitolo del passaggio dal kart alle vetture da corsa.",
   },
   {
     year: "2023",
     title: "Cupra TCR",
-    text: "Esperienza nel turismo ad alte prestazioni, con ulteriore crescita nella gestione della vettura e del weekend di gara.",
+    text: "Prosegue il percorso nelle vetture turismo con la Cupra TCR, ampliando l’esperienza su auto più potenti e complesse.",
   },
   {
     year: "2024",
     title: "Audi R8 GT3",
-    text: "Esperienza/test con Audi R8 GT3 di Tresor Audi Sport Italia: un primo contatto concreto con il mondo GT.",
+    text: "Test con Audi R8 GT3 di Tresor Audi Sport Italia: il primo confronto con una vettura della categoria GT3.",
   },
   {
     year: "2025",
@@ -58,46 +58,46 @@ const experience = [
 const professionalPillars = [
   {
     icon: Gauge,
-    title: "Performance",
-    text: "Preparazione, metodo e continuità: ogni sessione viene affrontata come un passaggio di crescita.",
+    title: "Preparazione",
+    text: "Arrivare in pista pronti significa curare ogni dettaglio, dal lavoro personale alla comprensione del programma e della vettura.",
   },
   {
     icon: BarChart3,
-    title: "Data approach",
-    text: "Un approccio orientato all'analisi e al confronto, per trasformare sensazioni e dati in indicazioni utili.",
+    title: "Adattamento",
+    text: "Ogni vettura richiede riferimenti diversi. Capire rapidamente cosa cambia e adattare la guida è parte del lavoro del pilota.",
   },
   {
     icon: MessageSquareText,
-    title: "Technical feedback",
-    text: "Comunicazione chiara con il team e attenzione al feedback tecnico come parte del lavoro di sviluppo.",
+    title: "Feedback",
+    text: "Descrivere con precisione ciò che succede in pista rende più efficace il confronto con tecnici e ingegneri.",
   },
   {
     icon: Users,
-    title: "Team integration",
-    text: "Il risultato nasce dal lavoro con ingegneri, tecnici e struttura: il pilota è una parte del sistema, non un elemento isolato.",
+    title: "Squadra",
+    text: "Il pilota lavora dentro un team: comunicazione, fiducia e rispetto dei ruoli contano quanto ciò che accade sul cronometro.",
   },
 ];
 
 const partnershipAreas = [
   {
     icon: Flag,
-    title: "Brand Exposure",
-    text: "Presenza del marchio nel contesto motorsport e nei contenuti legati all'attività sportiva.",
+    title: "Brand Visibility",
+    text: "Presenza del brand sugli asset disponibili del programma sportivo e nei contenuti collegati all’attività in pista.",
   },
   {
     icon: BriefcaseBusiness,
     title: "Hospitality & B2B",
-    text: "Esperienze, relazioni e occasioni di contatto da costruire intorno al progetto sportivo.",
+    text: "Momenti dedicati, quando previsti dal programma, per clienti, ospiti, stakeholder e relazioni aziendali.",
   },
   {
     icon: Users,
-    title: "Digital Content",
-    text: "Contenuti e storytelling pensati per valorizzare la partnership anche fuori dal circuito.",
+    title: "Content & Storytelling",
+    text: "Contenuti costruiti insieme al partner per dare continuità alla collaborazione anche oltre il weekend di gara.",
   },
   {
     icon: Target,
-    title: "Customer Activation",
-    text: "Attivazioni misurabili e iniziative dedicate, anche tramite Scan The Race e soluzioni QR concordate con il partner.",
+    title: "Brand Activation",
+    text: "Iniziative dedicate per creare un contatto concreto con pubblico e clienti, anche attraverso Scan The Race.",
   },
 ];
 
@@ -134,7 +134,7 @@ export default function Home() {
             <div className="animate-fadeIn mb-6 flex flex-wrap items-center gap-3">
               <span className="inline-flex items-center gap-2 px-3.5 py-1.5 border border-white/15 bg-black/35 backdrop-blur text-[11px] md:text-xs font-semibold tracking-[0.2em] uppercase rounded-full text-white">
                 <span className="w-1.5 h-1.5 rounded-full bg-red-500" />
-                GT Racing Driver · Italy
+                Racing Driver · Italy
               </span>
               <span className="text-xs uppercase tracking-[0.2em] text-gray-400">
                 ACI Sport licensed
@@ -148,10 +148,10 @@ export default function Home() {
             </h1>
 
             <p className="animate-fadeInUp delay-100 text-xl md:text-2xl text-white max-w-2xl leading-snug font-medium mb-4">
-              Performance. Progress. Partnership.
+              Passione, professionalità e voglia di vincere.
             </p>
             <p className="animate-fadeInUp delay-200 text-base md:text-lg text-gray-300 max-w-2xl leading-relaxed mb-9">
-              Un percorso costruito dal karting alle vetture GT, con l'obiettivo di trasformare ogni esperienza in valore sportivo, tecnico e professionale.
+              Dal karting alle vetture turismo e GT: una passione iniziata da bambino e cresciuta gara dopo gara, con l’ambizione di continuare a competere, migliorare e cogliere il prossimo passo nel motorsport.
             </p>
 
             <div className="animate-fadeInUp delay-300 flex flex-col sm:flex-row gap-3">
@@ -161,10 +161,10 @@ export default function Home() {
                 </span>
               </Link>
               <a
-                href="#programme-2027"
+                href="#next-chapter"
                 className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-white/8 border border-white/15 hover:bg-white/12 text-white rounded font-semibold transition-all"
               >
-                2027 Programme
+                The Next Chapter
               </a>
               <Link href="/partner">
                 <span className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-black/30 border border-white/15 hover:border-red-500/50 text-white rounded font-semibold cursor-pointer transition-all">
@@ -183,6 +183,18 @@ export default function Home() {
           <ChevronDown size={28} className="animate-bounce" />
         </a>
       </section>
+
+      <nav className="quick-nav" aria-label="Navigazione rapida della homepage">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 overflow-x-auto no-scrollbar">
+          <div className="flex items-center gap-2 min-w-max py-2.5">
+            <a href="#racing-profile" className="quick-nav-link">Profilo</a>
+            <a href="#career" className="quick-nav-link">Percorso</a>
+            <a href="#approach" className="quick-nav-link">Approccio</a>
+            <a href="#next-chapter" className="quick-nav-link">The Next Chapter</a>
+            <a href="#partnership" className="quick-nav-link">Partnership</a>
+          </div>
+        </div>
+      </nav>
 
       <section className="bg-black border-y border-white/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-2 lg:grid-cols-4">
@@ -209,19 +221,19 @@ export default function Home() {
           <div className={`opacity-0 ${profileRef.visible ? "animate-slideInLeft" : ""}`}>
             <div className="divider-red mb-5" />
             <div className="text-xs uppercase tracking-[0.22em] text-red-400 font-semibold mb-4">
-              Racing Profile
+              La mia storia
             </div>
             <h2 className="text-4xl md:text-6xl font-black text-white tracking-tight leading-[0.98] mb-7">
-              Costruire il pilota,
+              Una passione nata presto.
               <br />
-              non soltanto il giro veloce.
+              Una storia ancora da scrivere.
             </h2>
             <div className="space-y-5 text-gray-300 text-base md:text-lg leading-relaxed max-w-2xl">
               <p>
-                Filippo Ferrari nasce a Roma nel 2005 e inizia il proprio percorso nel motorsport a sette anni. Dal karting passa alle competizioni automobilistiche con Clio Cup e Cupra TCR, fino all'esperienza con Audi R8 GT3 nel 2024.
+                Filippo Ferrari nasce a Roma nel 2005 e sale su un kart per la prima volta a sette anni. Dopo gli anni nel karting, il percorso prosegue con Clio Cup e Cupra TCR, fino al test con Audi R8 GT3 di Tresor Audi Sport Italia nel 2024.
               </p>
               <p>
-                Il prossimo passo è costruire un percorso GT sempre più strutturato: esperienza, metodo, preparazione e capacità di lavorare all'interno di un team sono al centro del progetto.
+                Oggi l’obiettivo è continuare a crescere come pilota, confrontandosi con programmi sempre più competitivi e mantenendo aperte le opportunità che possono rappresentare il passo giusto.
               </p>
             </div>
             <Link href="/chi-sono">
@@ -241,9 +253,9 @@ export default function Home() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-transparent to-transparent" />
               <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8">
-                <div className="text-xs uppercase tracking-[0.2em] text-red-400 mb-2">Approach</div>
+                <div className="text-xs uppercase tracking-[0.2em] text-red-400 mb-2">Mindset</div>
                 <div className="text-xl md:text-2xl text-white font-bold">
-                  Professionalità dentro e fuori dalla pista.
+                  Serietà, preparazione e determinazione.
                 </div>
               </div>
             </div>
@@ -252,6 +264,7 @@ export default function Home() {
       </section>
 
       <section
+        id="career"
         ref={experienceRef.ref as React.RefObject<HTMLElement>}
         className="py-20 md:py-28 bg-[hsl(0_0%_7%)] border-y border-white/5"
       >
@@ -262,7 +275,7 @@ export default function Home() {
               Experience
             </div>
             <h2 className="text-3xl md:text-5xl font-black text-white">
-              Un percorso in evoluzione.
+              Le tappe del percorso.
             </h2>
           </div>
 
@@ -270,7 +283,7 @@ export default function Home() {
             {experience.map((item, index) => (
               <div
                 key={item.year}
-                className={`p-6 md:p-7 min-h-[250px] flex flex-col border-white/8 ${
+                className={`card-hover p-6 md:p-7 min-h-[250px] flex flex-col border-white/8 ${
                   index < experience.length - 1 ? "xl:border-r" : ""
                 } ${index < experience.length - 1 ? "border-b xl:border-b-0" : ""}`}
               >
@@ -284,6 +297,7 @@ export default function Home() {
       </section>
 
       <section
+        id="approach"
         ref={professionalRef.ref as React.RefObject<HTMLElement>}
         className="py-20 md:py-28 bg-black"
       >
@@ -291,13 +305,13 @@ export default function Home() {
           <div className={`max-w-3xl mb-14 opacity-0 ${professionalRef.visible ? "animate-fadeInUp" : ""}`}>
             <div className="divider-red mb-5" />
             <div className="text-xs uppercase tracking-[0.22em] text-red-400 font-semibold mb-3">
-              Beyond the lap time
+              Il lavoro del pilota
             </div>
             <h2 className="text-3xl md:text-5xl font-black text-white mb-5">
-              Essere veloci è solo una parte del lavoro.
+              La velocità non basta.
             </h2>
             <p className="text-gray-400 text-lg leading-relaxed">
-              Un progetto professionale richiede metodo, comunicazione, capacità di integrarsi nel team e rappresentare correttamente chi sceglie di farne parte.
+              Guidare forte è solo una parte. Preparazione, adattamento, feedback e lavoro di squadra diventano decisivi quando il livello si alza.
             </p>
           </div>
 
@@ -316,7 +330,7 @@ export default function Home() {
       </section>
 
       <section
-        id="programme-2027"
+        id="next-chapter"
         ref={programmeRef.ref as React.RefObject<HTMLElement>}
         className="relative py-24 md:py-32 overflow-hidden"
       >
@@ -328,19 +342,17 @@ export default function Home() {
               The Next Chapter
             </div>
             <h2 className="text-4xl md:text-6xl font-black text-white leading-[0.98] mb-7">
-              2027.
-              <br />
               Il prossimo passo.
             </h2>
             <p className="text-lg md:text-xl text-gray-200 leading-relaxed mb-5">
-              L'obiettivo è costruire un programma GT3 strutturato, credibile e sostenibile, come passaggio verso un percorso sempre più competitivo nel GT e nell'endurance internazionale.
+              Continuare a crescere, confrontarmi con programmi sempre più competitivi e trovare le opportunità giuste per portare avanti il mio percorso nel motorsport.
             </p>
             <p className="text-gray-400 leading-relaxed mb-9">
-              Non un traguardo isolato, ma un progetto da sviluppare con team, partner e realtà che condividano una visione di medio-lungo periodo.
+              Ogni scelta dovrà avere un senso sportivo: categoria, team e programma saranno valutati in funzione della crescita e delle opportunità concrete.
             </p>
             <Link href="/contatti">
               <span className="inline-flex items-center gap-2 px-6 py-3.5 btn-red rounded font-semibold cursor-pointer">
-                Parliamo del progetto <ArrowRight size={17} />
+                Parliamo del prossimo passo <ArrowRight size={17} />
               </span>
             </Link>
           </div>
@@ -348,6 +360,7 @@ export default function Home() {
       </section>
 
       <section
+        id="partnership"
         ref={partnerRef.ref as React.RefObject<HTMLElement>}
         className="py-20 md:py-28 bg-[hsl(0_0%_6%)]"
       >
@@ -356,13 +369,13 @@ export default function Home() {
             <div className="lg:sticky lg:top-28">
               <div className="divider-red mb-5" />
               <div className="text-xs uppercase tracking-[0.22em] text-red-400 font-semibold mb-3">
-                Partnership Platform
+                Partnership
               </div>
               <h2 className="text-3xl md:text-5xl font-black text-white mb-6">
-                Oltre il logo sulla vettura.
+                Il motorsport può diventare una piattaforma per il brand.
               </h2>
               <p className="text-gray-400 text-lg leading-relaxed mb-8">
-                Una partnership motorsport può diventare uno strumento di relazione, contenuto e attivazione. L'obiettivo è costruire proposte coerenti con il business del partner, non semplice esposizione passiva.
+                Una collaborazione può unire presenza del brand, contenuti, hospitality, relazioni e attivazioni. L’obiettivo è costruire qualcosa di coerente con l’azienda e con il programma sportivo, non limitarsi a esporre un logo.
               </p>
               <Link href="/partner">
                 <span className="inline-flex items-center gap-2 text-white font-semibold cursor-pointer group">
@@ -374,18 +387,18 @@ export default function Home() {
 
             <div className="grid sm:grid-cols-2 gap-4">
               {partnershipAreas.map(({ icon: Icon, title, text }) => (
-                <div key={title} className="rounded-2xl bg-black/40 border border-white/8 p-6 md:p-7">
+                <div key={title} className="card-hover rounded-2xl bg-black/40 border border-white/8 p-6 md:p-7">
                   <Icon size={22} className="text-red-400 mb-8" />
                   <h3 className="text-white text-xl font-bold mb-3">{title}</h3>
                   <p className="text-gray-400 text-sm leading-relaxed">{text}</p>
                 </div>
               ))}
-              <div className="sm:col-span-2 rounded-2xl border border-red-500/20 bg-red-950/10 p-6 md:p-8">
+              <div className="card-hover sm:col-span-2 rounded-2xl border border-red-500/20 bg-red-950/10 p-6 md:p-8">
                 <div className="text-xs uppercase tracking-[0.18em] text-red-400 font-semibold mb-3">
                   Scan The Race
                 </div>
                 <p className="text-gray-300 leading-relaxed">
-                  Un'attivazione tramite QR pensata per collegare il pubblico alle aziende partner e alle iniziative promozionali definite da ciascun brand, trasformando la presenza nel motorsport in un punto di contatto concreto.
+                  Durante gli eventi selezionati, un QR code può indirizzare il pubblico a una pagina dedicata ai partner del progetto. Ogni azienda può presentare un’offerta, un codice sconto o un contenuto concordato, trasformando la visibilità in un punto di contatto concreto.
                 </p>
               </div>
             </div>
@@ -399,7 +412,7 @@ export default function Home() {
             Motorsport · Brand · Partnership
           </div>
           <h2 className="text-3xl md:text-5xl font-black text-white mb-6">
-            Costruiamo il prossimo capitolo.
+            Il prossimo capitolo si costruisce in pista e fuori.
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto mb-9">
             Per opportunità sportive, partnership commerciali e collaborazioni professionali.

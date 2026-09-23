@@ -22,27 +22,27 @@ const phases = [
   {
     period: "2012 — 2020",
     title: "Il Karting",
-    desc: "A soli sette anni sale per la prima volta su un kart 60 Mini. Dopo anni di impegno e risultati costanti nelle categorie karting 125 monomarcia e KZ, getta le basi di una carriera solida.",
+    desc: "A sette anni sale per la prima volta su un kart 60 Mini. Gli anni successivi nelle categorie 125 monomarcia e KZ costruiscono le basi del suo percorso sportivo.",
   },
   {
     period: "2021",
     title: "Il Debutto in Auto",
-    desc: "A 16 anni debutta nelle competizioni automobilistiche con una Clio Cup, dimostrando velocità e maturità sorprendenti per la sua età.",
+    desc: "A 16 anni debutta nelle competizioni automobilistiche con una Clio Cup, affrontando il passaggio dal kart alle vetture da corsa.",
   },
   {
     period: "2023",
     title: "Cupra TCR",
-    desc: "Continua nel turismo con la Cupra TCR, con la quale consolida esperienza e performance stagione dopo stagione.",
+    desc: "Prosegue nelle vetture turismo con la Cupra TCR, ampliando l’esperienza su auto più potenti e complesse.",
   },
   {
     period: "2024",
     title: "Audi R8 GT3",
-    desc: "Momento chiave della carriera: testa l'Audi R8 GT3 di Tresor Audi Sport Italia. Un'esperienza che segna il tanto desiderato passaggio verso il mondo Gran Turismo.",
+    desc: "Testa l’Audi R8 GT3 di Tresor Audi Sport Italia: il primo confronto con una vettura GT3 e un passaggio importante nel suo percorso.",
   },
   {
     period: "2025",
     title: "ACI Sport Contest",
-    desc: "Viene selezionato per il contest Steering Wheel Super Salita organizzato da Wolf Racing Cars con il supporto dell'ACI Sport, un riconoscimento importante del percorso di crescita.",
+    desc: "Viene selezionato per il contest Steering Wheel Super Salita organizzato da Wolf Racing Cars con il supporto di ACI Sport.",
   },
 ];
 
@@ -113,32 +113,29 @@ export default function ChiSono() {
               <p>
                 Cresce in una{" "}
                 <strong className="text-white">
-                  famiglia di sportivi d'alto livello e appassionati di motori
+                  famiglia legata allo sport e appassionata di motori
                 </strong>
-                . Suo padre, anche lui pilota delle due ruote, ha partecipato e vinto in{" "}
+                . Suo padre, anche lui pilota delle due ruote, ha corso in{" "}
                 <strong className="text-red-400">
                   competizioni di enduro e rally italiane ed europee
                 </strong>
                 , prendendo parte anche alla leggendaria{" "}
-                <strong className="text-white">Parigi-Dakar</strong>: è proprio da lì che nasce
+                <strong className="text-white">Parigi-Dakar</strong>: un ambiente che alimenta fin da subito
                 la sua passione per le corse.
               </p>
               <p>
                 A soli <strong className="text-white">sette anni</strong> sale per la prima volta
-                su un kart 60 Mini, e da quel momento capisce che la{" "}
-                <strong className="text-red-400">velocità</strong> sarà parte della sua vita.
+                su un kart 60 Mini, e da quel momento il motorsport diventa una parte centrale del suo percorso.
                 Dopo anni di impegno nelle categorie <strong className="text-white">125 monomarcia e KZ</strong>,
                 a 16 anni debutta nelle competizioni automobilistiche con una{" "}
                 <strong className="text-red-400">Clio Cup</strong>.
               </p>
               <p>
                 Nel <strong className="text-white">2023</strong> prosegue con la{" "}
-                <strong className="text-red-400">Cupra TCR</strong>, consolidando esperienza e
-                performance. Nel <strong className="text-white">2024</strong> vive il momento
+                <strong className="text-red-400">Cupra TCR</strong>, proseguendo il proprio percorso nelle vetture turismo. Nel <strong className="text-white">2024</strong> vive il momento
                 chiave della carriera testando l'{" "}
                 <strong className="text-red-400">Audi R8 GT3</strong> di{" "}
-                <strong className="text-white">Tresor Audi Sport Italia</strong>, segnando il
-                passaggio verso il mondo Gran Turismo.
+                <strong className="text-white">Tresor Audi Sport Italia</strong>, confrontandosi per la prima volta con una vettura GT3.
               </p>
             </div>
             <div
@@ -148,9 +145,7 @@ export default function ChiSono() {
                 Nel <strong className="text-white">2025</strong> viene selezionato per il{" "}
                 <strong className="text-red-400">contest Steering Wheel Super Salita</strong>{" "}
                 organizzato da <strong className="text-white">Wolf Racing Cars</strong> con il
-                supporto dell' <strong className="text-white">ACI Sport</strong>: un
-                riconoscimento importante del percorso di crescita che sta costruendo passo dopo
-                passo.
+                supporto dell' <strong className="text-white">ACI Sport</strong>: un’esperienza che aggiunge un nuovo capitolo al suo percorso sportivo.
               </p>
               <p>
                 <strong className="text-white">Filippo</strong> è innanzitutto un ragazzo{" "}
@@ -161,14 +156,7 @@ export default function ChiSono() {
                 fuori dalla pista.
               </p>
               <p>
-                Il suo obiettivo è{" "}
-                <strong className="text-white">trasmettere la passione</strong>, la dedizione e i
-                valori che lo guidano a più persone possibili, perché crede che il motorsport non
-                sia solo velocità, ma anche{" "}
-                <strong className="text-red-400">
-                  crescita personale, sacrificio e condivisione
-                </strong>
-                .
+                Per Filippo il motorsport è competizione, ma anche disciplina, preparazione e responsabilità verso il team e verso le persone che rendono possibile ogni progetto.
               </p>
             </div>
           </div>
@@ -217,8 +205,8 @@ export default function ChiSono() {
         <div className="absolute inset-0 bg-black/60 flex items-center justify-center">
           <div className="text-center">
             <h3 className="text-2xl md:text-3xl font-black text-white mb-4">
-              Vuoi supportarmi?{" "}
-              <span className="text-gradient">Contattami!</span>
+              Parliamo del{" "}
+              <span className="text-gradient">prossimo passo.</span>
             </h3>
             <Link href="/contatti">
               <span className="inline-block px-8 py-3 btn-red rounded font-semibold cursor-pointer">
@@ -242,7 +230,7 @@ export default function ChiSono() {
           >
             <div className="divider-red mx-auto mb-4" />
             <h2 className="text-2xl md:text-3xl font-black text-white">
-              Le <span className="text-gradient">auto</span> in gara
+              Le <span className="text-gradient">vetture</span> del percorso
             </h2>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">

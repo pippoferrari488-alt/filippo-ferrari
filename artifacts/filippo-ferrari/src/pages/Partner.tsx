@@ -11,25 +11,25 @@ const IMG5 = "https://dadcg8.webwave.dev/files/dynamicContent/sites/dadcg8/image
 const IMG6 = "https://dadcg8.webwave.dev/files/dynamicContent/sites/dadcg8/images/it/webpage_29/mm3aqdb1/element_722/rwdMode_1/550x460/IMG_5420.webp";
 
 const benefits = [
-  "Visibilità diretta in pista: logo sull'auto, sulla tuta, sul casco e sui materiali ufficiali.",
-  "Presenza sui media digitali: sito web, social network, comunicati stampa e contenuti dedicati.",
-  "Attività di co-branding: post, video e campagne condivise con il brand.",
-  "Esperienze esclusive: giornate in pista, eventi aziendali, hospitality nei weekend di gara.",
-  "Valorizzazione dell'immagine aziendale: il motorsport è sinonimo di eccellenza, performance e determinazione.",
-  "Networking e relazioni: accesso a un ambiente professionale e internazionale, dove le collaborazioni possono estendersi oltre il mondo delle corse.",
+  "Branding su vettura, equipaggiamento e materiali quando previsto dal programma sportivo e dagli spazi disponibili.",
+  "Presenza nei contenuti digitali e nello storytelling collegato all’attività in pista.",
+  "Contenuti e iniziative co-branded costruiti in funzione degli obiettivi del partner.",
+  "Hospitality, guest experience ed eventi quando disponibili all’interno del programma.",
+  "Attivazioni dedicate, anche attraverso Scan The Race e soluzioni QR concordate con l’azienda.",
+  "Opportunità di relazione e networking con ospiti, clienti e stakeholder nel contesto motorsport.",
 ];
 
 const fiscalBenefits = [
-  "Deduzione fiscale totale delle spese di sponsorizzazione.",
-  "Ritorno d'immagine e comunicazione misurabile.",
-  "Possibilità di integrare l'investimento in strategie di marketing già esistenti.",
+  "Accordo e prestazioni di comunicazione definiti con chiarezza.",
+  "Attività e materiali concordati in funzione del programma sportivo.",
+  "Possibilità di integrare la partnership nelle iniziative marketing e commerciali dell’azienda.",
 ];
 
 const values = [
-  { title: "Professionalità", desc: "Un approccio serio e strutturato a ogni aspetto della carriera, in pista e fuori." },
-  { title: "Miglioramento Continuo", desc: "Ogni gara è un'opportunità di crescita tecnica e umana." },
-  { title: "Trasparenza", desc: "Rapporti basati sulla fiducia reciproca con partner e team." },
-  { title: "Spirito di Squadra", desc: "Nessun pilota vince da solo: il successo è condiviso." },
+  { title: "Professionalità", desc: "Serietà nella preparazione, nella comunicazione e nella rappresentazione del partner." },
+  { title: "Chiarezza", desc: "Obiettivi, attività e aspettative definiti in modo trasparente fin dall’inizio." },
+  { title: "Continuità", desc: "Una collaborazione acquista valore quando vive anche oltre il singolo evento." },
+  { title: "Squadra", desc: "Pilota, team e partner lavorano meglio quando condividono direzione e responsabilità." },
 ];
 
 export default function Partner() {
@@ -51,8 +51,8 @@ export default function Partner() {
         <div className="relative z-10 px-4 sm:px-8 lg:px-16 pb-12 animate-fadeInUp">
           <div className="divider-red mb-4" />
           <h1 className="text-4xl md:text-6xl font-black text-white">
-            Perché diventare{" "}
-            <span className="text-gradient">Partner</span>
+            Partnership{" "}
+            <span className="text-gradient">Motorsport</span>
           </h1>
         </div>
       </section>
@@ -79,31 +79,25 @@ export default function Partner() {
             >
               <div className="divider-red mb-5" />
               <h2 className="text-3xl font-black text-white mb-6 leading-tight">
-                Il motorsport è molto più di una{" "}
-                <span className="text-gradient">disciplina sportiva</span>
+                Il motorsport come{" "}
+                <span className="text-gradient">piattaforma di comunicazione</span>
               </h2>
               <div className="space-y-4 text-gray-300 leading-relaxed">
                 <p>
-                  È un <strong className="text-red-400">ecosistema di innovazione, performance
-                  e comunicazione</strong>. Ogni gara è un evento mediatico, con pubblico,
-                  stampa, social e un'immagine fortemente legata a valori positivi:{" "}
-                  <strong className="text-white">passione, tecnologia, precisione, ambizione
-                  e successo</strong>.
+                  Una partnership nel motorsport può unire presenza del brand, contenuti,
+                  relazioni e hospitality in un contesto ad alto coinvolgimento. Il valore non
+                  sta soltanto nello spazio per un logo, ma in ciò che si costruisce attorno
+                  al progetto sportivo.
                 </p>
                 <p>
-                  Sostenere la carriera di un pilota come{" "}
-                  <strong className="text-white">Filippo Ferrari</strong>, significa{" "}
-                  <strong className="text-red-400">legare il proprio brand</strong> a questi
-                  valori e a un{" "}
-                  <strong className="text-white">
-                    progetto giovane, serio e in continua crescita
-                  </strong>
-                  .
+                  Con <strong className="text-white">Filippo Ferrari</strong>, ogni proposta
+                  viene pensata in funzione del partner: obiettivi, pubblico, attivazioni e
+                  asset disponibili vengono definiti con chiarezza, senza formule standard.
                 </p>
                 <p>
-                  Chi sceglie di affiancarlo non fa solo pubblicità, ma entra a far parte di
-                  una <strong className="text-red-400">squadra</strong> che condivide obiettivi
-                  comuni: <strong className="text-white">vincere, crescere e distinguersi</strong>.
+                  L’obiettivo è creare una collaborazione <strong className="text-red-400">
+                  credibile e utile per entrambe le parti</strong>, coerente con il percorso
+                  sportivo e con la comunicazione dell’azienda.
                 </p>
               </div>
               <div className="mt-8">
@@ -130,12 +124,11 @@ export default function Partner() {
             >
               <div className="divider-red mb-5" />
               <h2 className="text-3xl font-black text-white mb-3">
-                Cosa offro ai{" "}
-                <span className="text-gradient">miei partner</span>
+                Una partnership{" "}
+                <span className="text-gradient">costruita su misura</span>
               </h2>
               <p className="text-gray-400 mb-8 leading-relaxed">
-                Ogni collaborazione è costruita su misura: non c'è una semplice esposizione del
-                marchio, ma una vera sinergia di visibilità e valore.
+                Ogni collaborazione viene definita in base al programma sportivo e agli obiettivi dell’azienda, con attività e deliverable chiari fin dall’inizio.
               </p>
               <ul className="space-y-4">
                 {benefits.map((b, i) => (
@@ -204,18 +197,14 @@ export default function Partner() {
             >
               <div className="divider-red mb-5" />
               <h2 className="text-3xl font-black text-white mb-3">
-                Vantaggi fiscali per le{" "}
-                <span className="text-gradient">aziende</span>
+                Una partnership,{" "}
+                <span className="text-gradient">non una donazione</span>
               </h2>
               <p className="text-gray-400 mb-6 leading-relaxed">
-                Sponsorizzare un pilota o un team nel motorsport non è una donazione, ma un vero{" "}
-                <strong className="text-white">investimento pubblicitario deducibile</strong>.
+                Una sponsorizzazione è una collaborazione commerciale basata su prestazioni di comunicazione definite e documentate.
               </p>
               <p className="text-gray-300 mb-6 text-sm leading-relaxed">
-                In base alla normativa italiana, i costi di sponsorizzazione sono considerati{" "}
-                <strong className="text-white">spese di pubblicità e promozione</strong>, quindi{" "}
-                <strong className="text-red-400">deducibili al 100%</strong>, purché
-                l'investimento abbia finalità di promozione del marchio o dei prodotti aziendali.
+                Aspetti fiscali, IVA e deducibilità dipendono dalla struttura dell’accordo e dalla situazione dell’azienda. Per questo vanno verificati con il proprio consulente fiscale, evitando promesse generiche e impostando correttamente il rapporto commerciale.
               </p>
               <div className="bg-red-950/20 border border-red-500/20 rounded-xl p-6">
                 <div className="text-red-400 text-xs font-semibold tracking-widest uppercase mb-4">
@@ -251,20 +240,17 @@ export default function Partner() {
               </h2>
               <div className="space-y-4 text-gray-300 leading-relaxed">
                 <p>
-                  Nel motorsport <strong className="text-white">nessun pilota vince da solo</strong>
-                  . Dietro ogni risultato ci sono persone, aziende e partner che condividono la
-                  stessa visione: <strong className="text-red-400">progredire costantemente</strong>{" "}
-                  e affrontare ogni sfida con determinazione.
+                  Una partnership funziona quando entrambe le parti sanno cosa stanno
+                  costruendo. Per questo il rapporto deve partire da obiettivi realistici,
+                  comunicazione chiara e rispetto degli impegni.
                 </p>
                 <p>
-                  <strong className="text-white">Insieme</strong> si può dare vita a un{" "}
-                  <strong className="text-red-400">progetto ambizioso e duraturo</strong>, in cui
-                  la tua azienda non è un semplice sponsor, ma una parte attiva della squadra.
+                  Il partner non è un logo da applicare: è una realtà da rappresentare con
+                  attenzione, dentro e fuori dalla pista.
                 </p>
                 <p>
-                  Sostenere la carriera di una giovane promessa significa unire passione,
-                  competenza, serietà e impegno in un percorso comune di{" "}
-                  <strong className="text-white">visibilità, crescita e risultati concreti</strong>.
+                  Quando esistono le condizioni giuste, il motorsport può diventare un punto
+                  d’incontro tra sport, clienti, contenuti e relazioni aziendali.
                 </p>
               </div>
             </div>
@@ -309,12 +295,12 @@ export default function Partner() {
         <div className="relative z-10 max-w-3xl mx-auto px-4 text-center">
           <div className="divider-red mx-auto mb-6" />
           <h2 className="text-3xl md:text-5xl font-black text-white mb-4 leading-tight">
-            Diventa <span className="text-gradient">Protagonista</span>
+            Costruiamo una <span className="text-gradient">partnership concreta</span>
           </h2>
           <p className="text-gray-300 mb-10 text-lg leading-relaxed">
-            Contattami per scoprire le opportunità di partnership su misura per la tua azienda.
+            Parliamo degli obiettivi della tua azienda e delle opportunità realmente disponibili nel programma sportivo.
             <br className="hidden md:block" />
-            Ogni traguardo raggiunto è una conquista condivisa.
+            Da lì possiamo costruire una proposta coerente per entrambe le parti.
           </p>
           <Link href="/contatti">
             <span className="inline-block px-12 py-4 btn-red rounded font-semibold text-lg cursor-pointer">
