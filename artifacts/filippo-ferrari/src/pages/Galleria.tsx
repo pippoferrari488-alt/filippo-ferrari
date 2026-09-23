@@ -83,7 +83,7 @@ export default function Galleria() {
             <span className="text-gradient">Galleria</span>
           </h1>
           <p className="text-gray-400 max-w-xl mx-auto">
-            Una selezione di immagini dal percorso in pista, tra karting, vetture turismo e GT. Clicca su una foto per ingrandirla.
+            Momenti, emozioni e adrenalina catturati in pista. Clicca su una foto per ingrandirla.
           </p>
         </div>
       </section>

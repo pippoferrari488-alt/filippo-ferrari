@@ -1,5 +1,5 @@
 import { Link } from "wouter";
-import { CheckCircle } from "lucide-react";
+import { ArrowRight, CheckCircle, QrCode } from "lucide-react";
 import { useIntersection } from "@/hooks/useIntersection";
 
 const HERO_BG = "https://dadcg8.webwave.dev/files/dynamicContent/sites/dadcg8/images/it/webpage_31/mm3aqecy/element_815/rwdMode_1/2400x420/a-race-car-driving-down-a-race-track.webp";
@@ -11,30 +11,49 @@ const IMG5 = "https://dadcg8.webwave.dev/files/dynamicContent/sites/dadcg8/image
 const IMG6 = "https://dadcg8.webwave.dev/files/dynamicContent/sites/dadcg8/images/it/webpage_29/mm3aqdb1/element_722/rwdMode_1/550x460/IMG_5420.webp";
 
 const benefits = [
-  "Branding su vettura, equipaggiamento e materiali quando previsto dal programma sportivo e dagli spazi disponibili.",
-  "Presenza nei contenuti digitali e nello storytelling collegato all’attività in pista.",
-  "Contenuti e iniziative co-branded costruiti in funzione degli obiettivi del partner.",
-  "Hospitality, guest experience ed eventi quando disponibili all’interno del programma.",
-  "Attivazioni dedicate, anche attraverso Scan The Race e soluzioni QR concordate con l’azienda.",
-  "Opportunità di relazione e networking con ospiti, clienti e stakeholder nel contesto motorsport.",
+  "Visibilità diretta in pista: logo sull'auto, sulla tuta, sul casco e sui materiali ufficiali.",
+  "Presenza sui media digitali: sito web, social network, comunicati stampa e contenuti dedicati.",
+  "Attività di co-branding: post, video e campagne condivise con il brand.",
+  "Esperienze esclusive: giornate in pista, eventi aziendali, hospitality nei weekend di gara.",
+  "Valorizzazione dell'immagine aziendale: il motorsport è sinonimo di eccellenza, performance e determinazione.",
+  "Networking e relazioni: accesso a un ambiente professionale e internazionale, dove le collaborazioni possono estendersi oltre il mondo delle corse.",
 ];
 
 const fiscalBenefits = [
-  "Accordo e prestazioni di comunicazione definiti con chiarezza.",
-  "Attività e materiali concordati in funzione del programma sportivo.",
-  "Possibilità di integrare la partnership nelle iniziative marketing e commerciali dell’azienda.",
+  "Accordo commerciale e prestazioni di comunicazione definite con chiarezza.",
+  "Attività e deliverable concordati in funzione del programma sportivo.",
+  "Possibilità di integrare la partnership nelle strategie marketing e commerciali dell'azienda.",
+];
+
+const scanSteps = [
+  {
+    number: "01",
+    title: "Il QR",
+    text: "Durante gli eventi selezionati, il QR di Scan The Race può essere utilizzato sulla vettura e sui canali collegati al progetto.",
+  },
+  {
+    number: "02",
+    title: "La pagina partner",
+    text: "La scansione apre una pagina dedicata alle aziende che partecipano all'iniziativa, rendendo semplice scoprire i partner.",
+  },
+  {
+    number: "03",
+    title: "L'attivazione",
+    text: "Ogni azienda può mettere in evidenza un codice sconto, un'offerta, un servizio, un prodotto o un contenuto concordato.",
+  },
 ];
 
 const values = [
-  { title: "Professionalità", desc: "Serietà nella preparazione, nella comunicazione e nella rappresentazione del partner." },
-  { title: "Chiarezza", desc: "Obiettivi, attività e aspettative definiti in modo trasparente fin dall’inizio." },
-  { title: "Continuità", desc: "Una collaborazione acquista valore quando vive anche oltre il singolo evento." },
-  { title: "Squadra", desc: "Pilota, team e partner lavorano meglio quando condividono direzione e responsabilità." },
+  { title: "Professionalità", desc: "Un approccio serio e strutturato a ogni aspetto della carriera, in pista e fuori." },
+  { title: "Miglioramento Continuo", desc: "Ogni gara è un'opportunità di crescita tecnica e umana." },
+  { title: "Trasparenza", desc: "Rapporti basati sulla fiducia reciproca con partner e team." },
+  { title: "Spirito di Squadra", desc: "Nessun pilota vince da solo: il successo è condiviso." },
 ];
 
 export default function Partner() {
   const introRef = useIntersection();
   const benefitsRef = useIntersection();
+  const scanRef = useIntersection();
   const fiscalRef = useIntersection();
   const valuesRef = useIntersection();
 
@@ -51,8 +70,8 @@ export default function Partner() {
         <div className="relative z-10 px-4 sm:px-8 lg:px-16 pb-12 animate-fadeInUp">
           <div className="divider-red mb-4" />
           <h1 className="text-4xl md:text-6xl font-black text-white">
-            Partnership{" "}
-            <span className="text-gradient">Motorsport</span>
+            Perché diventare{" "}
+            <span className="text-gradient">Partner</span>
           </h1>
         </div>
       </section>
@@ -79,25 +98,31 @@ export default function Partner() {
             >
               <div className="divider-red mb-5" />
               <h2 className="text-3xl font-black text-white mb-6 leading-tight">
-                Il motorsport come{" "}
-                <span className="text-gradient">piattaforma di comunicazione</span>
+                Il motorsport è molto più di una{" "}
+                <span className="text-gradient">disciplina sportiva</span>
               </h2>
               <div className="space-y-4 text-gray-300 leading-relaxed">
                 <p>
-                  Una partnership nel motorsport può unire presenza del brand, contenuti,
-                  relazioni e hospitality in un contesto ad alto coinvolgimento. Il valore non
-                  sta soltanto nello spazio per un logo, ma in ciò che si costruisce attorno
-                  al progetto sportivo.
+                  È un <strong className="text-red-400">ecosistema di innovazione, performance
+                  e comunicazione</strong>. Ogni gara è un evento mediatico, con pubblico,
+                  stampa, social e un'immagine fortemente legata a valori positivi:{" "}
+                  <strong className="text-white">passione, tecnologia, precisione, ambizione
+                  e successo</strong>.
                 </p>
                 <p>
-                  Con <strong className="text-white">Filippo Ferrari</strong>, ogni proposta
-                  viene pensata in funzione del partner: obiettivi, pubblico, attivazioni e
-                  asset disponibili vengono definiti con chiarezza, senza formule standard.
+                  Sostenere la carriera di un pilota come{" "}
+                  <strong className="text-white">Filippo Ferrari</strong>, significa{" "}
+                  <strong className="text-red-400">legare il proprio brand</strong> a questi
+                  valori e a un{" "}
+                  <strong className="text-white">
+                    progetto giovane, serio e in continua crescita
+                  </strong>
+                  .
                 </p>
                 <p>
-                  L’obiettivo è creare una collaborazione <strong className="text-red-400">
-                  credibile e utile per entrambe le parti</strong>, coerente con il percorso
-                  sportivo e con la comunicazione dell’azienda.
+                  Chi sceglie di affiancarlo non fa solo pubblicità, ma entra a far parte di
+                  una <strong className="text-red-400">squadra</strong> che condivide obiettivi
+                  comuni: <strong className="text-white">vincere, crescere e distinguersi</strong>.
                 </p>
               </div>
               <div className="mt-8">
@@ -124,11 +149,12 @@ export default function Partner() {
             >
               <div className="divider-red mb-5" />
               <h2 className="text-3xl font-black text-white mb-3">
-                Una partnership{" "}
-                <span className="text-gradient">costruita su misura</span>
+                Cosa offro ai{" "}
+                <span className="text-gradient">miei partner</span>
               </h2>
               <p className="text-gray-400 mb-8 leading-relaxed">
-                Ogni collaborazione viene definita in base al programma sportivo e agli obiettivi dell’azienda, con attività e deliverable chiari fin dall’inizio.
+                Ogni collaborazione è costruita su misura: non c'è una semplice esposizione del
+                marchio, ma una vera sinergia di visibilità e valore.
               </p>
               <ul className="space-y-4">
                 {benefits.map((b, i) => (
@@ -175,6 +201,84 @@ export default function Partner() {
         </div>
       </section>
 
+
+      {/* Scan The Race */}
+      <section
+        id="scan-the-race"
+        ref={scanRef.ref as React.RefObject<HTMLElement>}
+        className="py-20 md:py-24 bg-black border-y border-white/5 scroll-mt-24"
+      >
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className={`grid lg:grid-cols-[0.8fr_1.2fr] gap-12 lg:gap-16 items-start opacity-0 ${scanRef.visible ? "animate-fadeInUp" : ""}`}>
+            <div>
+              <div className="divider-red mb-5" />
+              <div className="text-xs uppercase tracking-[0.22em] text-red-400 font-semibold mb-4">
+                Scan The Race
+              </div>
+              <h2 className="text-3xl md:text-5xl font-black text-white leading-tight mb-6">
+                Dalla visibilità
+                <br />
+                <span className="text-gradient">all'interazione.</span>
+              </h2>
+              <div className="space-y-4 text-gray-300 leading-relaxed">
+                <p>
+                  Scan The Race nasce per trasformare la presenza di un partner nel motorsport
+                  in un punto di contatto diretto con il pubblico.
+                </p>
+                <p>
+                  Durante gli eventi selezionati, un QR code collegato al progetto conduce a una
+                  pagina dedicata alle aziende partner. Da lì, chi scansiona può scegliere il brand
+                  di interesse e accedere all'iniziativa che l'azienda ha deciso di mettere in evidenza.
+                </p>
+                <p>
+                  Può essere un codice sconto, un'offerta, un prodotto, un servizio o un contenuto
+                  dedicato: l'attivazione viene definita insieme al partner.
+                </p>
+              </div>
+
+              <Link href="/contatti">
+                <span className="mt-8 inline-flex items-center gap-2 px-6 py-3.5 btn-red rounded font-semibold cursor-pointer">
+                  Parliamo di Scan The Race <ArrowRight size={17} />
+                </span>
+              </Link>
+            </div>
+
+            <div className="rounded-2xl border border-red-500/20 bg-red-950/10 p-6 md:p-8">
+              <div className="flex items-center gap-3 mb-8">
+                <div className="w-12 h-12 rounded-xl bg-red-600/15 border border-red-500/25 flex items-center justify-center">
+                  <QrCode size={24} className="text-red-400" />
+                </div>
+                <div>
+                  <div className="text-white font-bold text-lg">Come funziona</div>
+                  <div className="text-gray-500 text-sm">
+                    Un percorso semplice, pensato per il pubblico e per il partner.
+                  </div>
+                </div>
+              </div>
+
+              <div className="grid sm:grid-cols-3 gap-4">
+                {scanSteps.map((step) => (
+                  <div
+                    key={step.number}
+                    className="card-hover rounded-xl border border-white/8 bg-black/35 p-5"
+                  >
+                    <div className="text-red-400 text-xs font-black tracking-[0.18em] mb-5">
+                      {step.number}
+                    </div>
+                    <h3 className="text-white font-bold mb-2">{step.title}</h3>
+                    <p className="text-gray-400 text-sm leading-relaxed">{step.text}</p>
+                  </div>
+                ))}
+              </div>
+
+              <p className="text-gray-500 text-xs leading-relaxed mt-6">
+                Formato, presenza del QR e contenuti vengono definiti in funzione dell'evento e della partnership.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Fiscal benefits */}
       <section
         ref={fiscalRef.ref as React.RefObject<HTMLElement>}
@@ -197,18 +301,21 @@ export default function Partner() {
             >
               <div className="divider-red mb-5" />
               <h2 className="text-3xl font-black text-white mb-3">
-                Una partnership,{" "}
-                <span className="text-gradient">non una donazione</span>
+                Aspetti commerciali e{" "}
+                <span className="text-gradient">fiscali</span>
               </h2>
               <p className="text-gray-400 mb-6 leading-relaxed">
-                Una sponsorizzazione è una collaborazione commerciale basata su prestazioni di comunicazione definite e documentate.
+                Una sponsorizzazione motorsport è una collaborazione commerciale basata su attività
+                e prestazioni di comunicazione definite tra le parti, non una semplice donazione.
               </p>
               <p className="text-gray-300 mb-6 text-sm leading-relaxed">
-                Aspetti fiscali, IVA e deducibilità dipendono dalla struttura dell’accordo e dalla situazione dell’azienda. Per questo vanno verificati con il proprio consulente fiscale, evitando promesse generiche e impostando correttamente il rapporto commerciale.
+                Il trattamento fiscale, la deducibilità dei costi e l'IVA dipendono dalla struttura
+                dell'accordo e dalla situazione dell'azienda. Per questo gli aspetti fiscali vanno
+                verificati dal partner con il proprio consulente.
               </p>
               <div className="bg-red-950/20 border border-red-500/20 rounded-xl p-6">
                 <div className="text-red-400 text-xs font-semibold tracking-widest uppercase mb-4">
-                  In sintesi
+                  In pratica
                 </div>
                 <ul className="space-y-3">
                   {fiscalBenefits.map((b, i) => (
@@ -240,17 +347,20 @@ export default function Partner() {
               </h2>
               <div className="space-y-4 text-gray-300 leading-relaxed">
                 <p>
-                  Una partnership funziona quando entrambe le parti sanno cosa stanno
-                  costruendo. Per questo il rapporto deve partire da obiettivi realistici,
-                  comunicazione chiara e rispetto degli impegni.
+                  Nel motorsport <strong className="text-white">nessun pilota vince da solo</strong>
+                  . Dietro ogni risultato ci sono persone, aziende e partner che condividono la
+                  stessa visione: <strong className="text-red-400">progredire costantemente</strong>{" "}
+                  e affrontare ogni sfida con determinazione.
                 </p>
                 <p>
-                  Il partner non è un logo da applicare: è una realtà da rappresentare con
-                  attenzione, dentro e fuori dalla pista.
+                  <strong className="text-white">Insieme</strong> si può dare vita a un{" "}
+                  <strong className="text-red-400">progetto ambizioso e duraturo</strong>, in cui
+                  la tua azienda non è un semplice sponsor, ma una parte attiva della squadra.
                 </p>
                 <p>
-                  Quando esistono le condizioni giuste, il motorsport può diventare un punto
-                  d’incontro tra sport, clienti, contenuti e relazioni aziendali.
+                  Sostenere la carriera di una giovane promessa significa unire passione,
+                  competenza, serietà e impegno in un percorso comune di{" "}
+                  <strong className="text-white">visibilità, crescita e risultati concreti</strong>.
                 </p>
               </div>
             </div>
@@ -295,12 +405,12 @@ export default function Partner() {
         <div className="relative z-10 max-w-3xl mx-auto px-4 text-center">
           <div className="divider-red mx-auto mb-6" />
           <h2 className="text-3xl md:text-5xl font-black text-white mb-4 leading-tight">
-            Costruiamo una <span className="text-gradient">partnership concreta</span>
+            Diventa <span className="text-gradient">Protagonista</span>
           </h2>
           <p className="text-gray-300 mb-10 text-lg leading-relaxed">
-            Parliamo degli obiettivi della tua azienda e delle opportunità realmente disponibili nel programma sportivo.
+            Contattami per scoprire le opportunità di partnership su misura per la tua azienda.
             <br className="hidden md:block" />
-            Da lì possiamo costruire una proposta coerente per entrambe le parti.
+            Ogni traguardo raggiunto è una conquista condivisa.
           </p>
           <Link href="/contatti">
             <span className="inline-block px-12 py-4 btn-red rounded font-semibold text-lg cursor-pointer">
