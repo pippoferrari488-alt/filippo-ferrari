@@ -3,7 +3,7 @@ import { X, ChevronLeft, ChevronRight } from "lucide-react";
 import { useIntersection } from "@/hooks/useIntersection";
 
 const BASE = "https://yourbrand-18274.kxcdn.com/lib/dadcg8/";
-const HERO_BG = BASE + "99_cola_moncini_vanberlo_401-XL-mkubenqb.jpg";
+const HERO_BG = "https://dadcg8.webwave.dev/files/dynamicContent/sites/dadcg8/images/it/webpage_24/mm3aqfui/element_620/rwdMode_1/2400x700/99_cola_moncini_vanberlo_401-XL.webp";
 
 const images = [
   { src: "https://yourbrand-18274.kxcdn.com/files/dynamicContent/sites/dadcg8/images/it/webpage_25/mm3aqfhw/element_657/0/IMG_8727-mky6kak2.webp", full: "https://yourbrand-18274.kxcdn.com/lib/dadcg8/IMG_8727-mky6kak2-mkymhyxu.jpeg" },
