@@ -1,70 +1,76 @@
-module.exports = async function handler(req, res) {
-  const raw = Array.isArray(req.query?.url) ? req.query.url[0] : req.query?.url;
-
-  if (!raw) {
-    return res.status(400).send("Missing image URL");
-  }
-
-  let url;
+export default async function handler(req, res) {
   try {
-    url = new URL(raw);
-  } catch {
-    return res.status(400).send("Invalid URL");
-  }
+    const requestUrl = new URL(req.url, "https://filippo-ferrari.vercel.app");
+    const raw = requestUrl.searchParams.get("url");
 
-  if (
-    url.protocol !== "https:" ||
-    url.hostname !== "yourbrand-18274.kxcdn.com"
-  ) {
-    return res.status(403).send("Image host not allowed");
-  }
+    if (!raw) {
+      res.statusCode = 400;
+      return res.end("Missing image URL");
+    }
 
-  const referrers = [
-    "https://filippo-ferrari-official.vercel.app/",
-    "https://dadcg8.webwave.dev/",
-    null,
-  ];
-
-  let upstream = null;
-
-  for (const referer of referrers) {
+    let imageUrl;
     try {
-      const headers = {
-        Accept: "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
-        "User-Agent": "Mozilla/5.0",
-      };
+      imageUrl = new URL(raw);
+    } catch {
+      res.statusCode = 400;
+      return res.end("Invalid URL");
+    }
 
-      if (referer) headers.Referer = referer;
+    if (
+      imageUrl.protocol !== "https:" ||
+      imageUrl.hostname !== "yourbrand-18274.kxcdn.com"
+    ) {
+      res.statusCode = 403;
+      return res.end("Image host not allowed");
+    }
 
-      const r = await fetch(url.toString(), {
-        headers,
+    const attempts = [
+      {},
+      { Referer: "https://filippo-ferrari-official.vercel.app/" },
+      { Referer: "https://dadcg8.webwave.dev/" },
+    ];
+
+    let lastStatus = 0;
+
+    for (const extraHeaders of attempts) {
+      const response = await fetch(imageUrl.toString(), {
         redirect: "follow",
+        headers: {
+          "User-Agent": "Mozilla/5.0",
+          Accept: "image/avif,image/webp,image/apng,image/*,*/*;q=0.8",
+          ...extraHeaders,
+        },
       });
 
-      if (r.ok) {
-        upstream = r;
-        break;
-      }
-    } catch {}
+      lastStatus = response.status;
+
+      if (!response.ok) continue;
+
+      const type = response.headers.get("content-type") || "image/jpeg";
+
+      if (!type.startsWith("image/")) continue;
+
+      const bytes = Buffer.from(await response.arrayBuffer());
+
+      res.statusCode = 200;
+      res.setHeader("Content-Type", type);
+      res.setHeader(
+        "Cache-Control",
+        "public, max-age=86400, s-maxage=2592000, stale-while-revalidate=604800"
+      );
+
+      return res.end(bytes);
+    }
+
+    res.statusCode = 502;
+    return res.end(`Upstream image unavailable (${lastStatus})`);
+  } catch (error) {
+    console.error(error);
+    res.statusCode = 500;
+    return res.end(
+      `Gallery proxy error: ${
+        error instanceof Error ? error.message : String(error)
+      }`
+    );
   }
-
-  if (!upstream) {
-    return res.status(404).send("Image unavailable");
-  }
-
-  const type = upstream.headers.get("content-type") || "image/jpeg";
-
-  if (!type.startsWith("image/")) {
-    return res.status(502).send("Invalid upstream content");
-  }
-
-  const buffer = Buffer.from(await upstream.arrayBuffer());
-
-  res.setHeader("Content-Type", type);
-  res.setHeader(
-    "Cache-Control",
-    "public, max-age=86400, s-maxage=2592000, stale-while-revalidate=604800"
-  );
-
-  return res.status(200).send(buffer);
-};
+}
