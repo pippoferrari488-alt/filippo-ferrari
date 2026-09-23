@@ -3,7 +3,8 @@ import { X, ChevronLeft, ChevronRight } from "lucide-react";
 import { useIntersection } from "@/hooks/useIntersection";
 
 const BASE = "https://yourbrand-18274.kxcdn.com/lib/dadcg8/";
-const HERO_BG = "https://dadcg8.webwave.dev/files/dynamicContent/sites/dadcg8/images/it/webpage_24/mm3aqfui/element_620/rwdMode_1/2400x700/99_cola_moncini_vanberlo_401-XL.webp";
+const HERO_BG = "https://dadcg8.webwave.dev/files/dynamicContent/sites/dadcg8/images/it/webpage_31/mm3aqecy/element_815/rwdMode_1/2400x420/a-race-car-driving-down-a-race-track.webp";
+const proxyImage = (url: string) => `/api/gallery-image?url=${encodeURIComponent(url)}`;
 
 const images = [
   { src: "https://yourbrand-18274.kxcdn.com/files/dynamicContent/sites/dadcg8/images/it/webpage_25/mm3aqfhw/element_657/0/IMG_8727-mky6kak2.webp", full: "https://yourbrand-18274.kxcdn.com/lib/dadcg8/IMG_8727-mky6kak2-mkymhyxu.jpeg" },
@@ -148,8 +149,15 @@ export default function Galleria() {
                   alt={`Filippo Ferrari - immagine ${i + 1}`}
                   className="img-cover"
                   loading={i < 6 ? "eager" : "lazy"}
+                  referrerPolicy="no-referrer"
                   onError={(e) => {
-                    (e.target as HTMLImageElement).closest("button")!.style.display = "none";
+                    const el = e.target as HTMLImageElement;
+                    if (el.dataset.proxy !== "1") {
+                      el.dataset.proxy = "1";
+                      el.src = proxyImage(img.src);
+                    } else {
+                      el.closest("button")!.style.display = "none";
+                    }
                   }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -190,9 +198,18 @@ export default function Galleria() {
             alt={`Foto ${lightbox + 1}`}
             className="max-w-full max-h-[85vh] object-contain rounded-lg shadow-2xl"
             onClick={(e) => e.stopPropagation()}
+            referrerPolicy="no-referrer"
             onError={(e) => {
-              // fall back to thumbnail
-              (e.target as HTMLImageElement).src = images[lightbox].src;
+              const el = e.target as HTMLImageElement;
+              const step = el.dataset.proxyStep || "0";
+
+              if (step === "0") {
+                el.dataset.proxyStep = "1";
+                el.src = proxyImage(images[lightbox].full);
+              } else if (step === "1") {
+                el.dataset.proxyStep = "2";
+                el.src = proxyImage(images[lightbox].src);
+              }
             }}
           />
           <button
