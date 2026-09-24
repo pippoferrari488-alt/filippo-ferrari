@@ -252,7 +252,7 @@ export default function Home() {
           className="absolute inset-0 bg-cover bg-no-repeat"
           style={{
             backgroundImage: `url(${PARTNER_BG})`,
-            backgroundPosition: "center 55%",
+            backgroundPosition: "center 58%",
           }}
         />
         <div className="absolute inset-0 bg-black/75" />
