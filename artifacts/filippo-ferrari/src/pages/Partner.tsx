@@ -87,7 +87,7 @@ export default function Partner() {
           className="absolute inset-0 bg-cover bg-no-repeat"
           style={{
             backgroundImage: `url(${HERO_BG})`,
-            backgroundPosition: "38% 66%",
+            backgroundPosition: "38% 69%",
           }}
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-transparent" />
