@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { Link } from "wouter";
-import { ChevronDown, Play } from "lucide-react";
+import { ChevronDown } from "lucide-react";
 import { useIntersection } from "@/hooks/useIntersection";
 
 const HERO_BG = "/gallery/audi-r8-gt3/09_IMG_0927.jpg";
@@ -10,15 +10,15 @@ const PARTNER_BG = "https://dadcg8.webwave.dev/files/dynamicContent/sites/dadcg8
 const stats = [
   { value: "2005", label: "Anno di nascita" },
   { value: "7", label: "Anni al primo kart" },
-  { value: "2024", label: "Audi R8 GT3" },
+  { value: "2024", label: "Audi R8 GT3 · Test" },
   { value: "2025", label: "ACI Sport Contest" },
 ];
 
 const career = [
   { year: "2012", event: "Primo kart 60 Mini", desc: "A soli sette anni sale per la prima volta su un kart" },
   { year: "2021", event: "Clio Cup", desc: "Debutto nelle competizioni automobilistiche a 16 anni" },
-  { year: "2023", event: "Cupra TCR", desc: "Stagione nel turismo con consolidamento di esperienza e performance" },
-  { year: "2024", event: "Audi R8 GT3", desc: "Test con la supercar di Tresor Audi Sport Italia, passaggio GT" },
+  { year: "2023", event: "Cupra TCR", desc: "Esperienza con la Cupra TCR, proseguendo il percorso nelle vetture turismo" },
+  { year: "2024", event: "Audi R8 GT3", desc: "Test con l'Audi R8 GT3 di Tresor Audi Sport Italia, primo confronto diretto con una vettura GT3" },
   { year: "2025", event: "ACI Sport Contest", desc: "Selezione per Steering Wheel Super Salita di Wolf Racing Cars" },
 ];
 
@@ -179,7 +179,7 @@ export default function Home() {
                   A soli sette anni inizia con i kart e, dopo anni di esperienza nelle categorie{" "}
                   <strong className="text-white">125 monomarcia e KZ</strong>, debutta a 16 anni
                   nella <strong className="text-red-400">Clio Cup</strong>, proseguendo nel turismo
-                  con la <strong className="text-white">Cupra TCR</strong> e, nel 2024, con l'
+                  con la <strong className="text-white">Cupra TCR</strong> e, nel 2024, con un test sull'
                   <strong className="text-red-400">Audi R8 GT3</strong> di{" "}
                   <strong className="text-white">Tresor Audi Sport Italia</strong>.
                 </p>
@@ -266,11 +266,11 @@ export default function Home() {
             </p>
             <div className="text-gray-300 max-w-2xl mx-auto mb-4 leading-relaxed">
               <p>
-                <strong className="text-white">Collaborare insieme a Filippo</strong> significa
+                <strong className="text-white">Collaborare con Filippo</strong> significa
                 entrare nel mondo del motorsport con{" "}
                 <strong className="text-red-400">visibilità</strong>,{" "}
                 <strong className="text-red-400">energia</strong> e{" "}
-                <strong className="text-red-400">risultati</strong>.
+                <strong className="text-red-400">attivazioni</strong> costruite su misura.
               </p>
             </div>
             <blockquote className="border-l-4 border-red-500 pl-6 text-left my-8 max-w-2xl mx-auto">
@@ -278,7 +278,7 @@ export default function Home() {
                 "I miei <strong className="text-white">partner</strong> non sono semplici{" "}
                 <strong className="text-white">sponsor</strong>, ma{" "}
                 <strong className="text-red-400">parte del mio team</strong>: insieme affrontiamo
-                ogni curva con determinazione e tagliamo il traguardo trionfanti."
+                ogni curva con determinazione e costruiamo un percorso condiviso dentro e fuori dalla pista."
               </p>
             </blockquote>
             <div className="flex flex-col sm:flex-row flex-wrap gap-4 justify-center mt-8">

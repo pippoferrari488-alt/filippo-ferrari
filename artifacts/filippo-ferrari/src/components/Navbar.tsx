@@ -49,7 +49,7 @@ export default function Navbar() {
                   Filippo <span className="text-red-500">Ferrari</span>
                 </span>
                 <div className="text-xs text-gray-400 tracking-widest uppercase">
-                  Pilota
+                  Racing Driver
                 </div>
               </div>
             </div>

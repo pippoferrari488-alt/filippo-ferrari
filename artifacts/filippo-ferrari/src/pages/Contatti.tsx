@@ -6,7 +6,7 @@ const HERO_BG = "https://dadcg8.webwave.dev/files/dynamicContent/sites/dadcg8/im
 
 const faqs = [
   { q: "Come posso seguire Filippo Ferrari?", a: "Il sito raccoglie il profilo e le principali tappe del percorso; per gli aggiornamenti più frequenti puoi seguire i canali Instagram e TikTok." },
-  { q: "Qual è il prossimo programma sportivo?", a: "I programmi futuri vengono comunicati solo quando sono definiti. La sezione The Next Chapter racconta la direzione del percorso senza legarla a una stagione specifica." },
+  { q: "Qual è il prossimo programma sportivo?", a: "I programmi futuri vengono comunicati solo quando sono definiti. Il sito racconta il percorso e le opportunità senza presentare come confermati programmi non ancora ufficializzati." },
   { q: "Come posso proporre una partnership?", a: "Puoi utilizzare il form o i contatti diretti indicando azienda, obiettivi e tipo di collaborazione che vorresti valutare." },
   { q: "Per quali richieste posso contattare Filippo?", a: "Opportunità sportive, partnership commerciali, richieste media e collaborazioni professionali." },
 ];
@@ -108,7 +108,9 @@ export default function Contatti() {
                   </div>
                   <div className="flex items-start gap-3">
                     <input type="checkbox" id="gdpr" checked={gdpr} onChange={(e) => setGdpr(e.target.checked)} className="mt-1 w-4 h-4 accent-red-600" />
-                    <label htmlFor="gdpr" className="text-gray-500 text-xs leading-relaxed">Accettazione GDPR * — Inviando il messaggio acconsento a che questo sito conservi le informazioni inviate così che possa essere gestita la mia richiesta.</label>
+                    <label htmlFor="gdpr" className="text-gray-500 text-xs leading-relaxed">
+                      Ho letto l'<a href="/privacy" target="_blank" rel="noopener noreferrer" className="text-red-400 hover:text-red-300 underline underline-offset-2">informativa privacy</a> e acconsento all'invio dei dati necessari alla gestione della mia richiesta. *
+                    </label>
                   </div>
                   {status === "error" && <p className="text-red-400 text-xs">Si prega di compilare tutti i campi obbligatori!</p>}
                   <button type="submit" className="w-full py-4 btn-red rounded-lg font-semibold text-white tracking-wide">Invia</button>

@@ -21,11 +21,11 @@ export default function Footer() {
                 <div className="text-white font-bold">
                   Filippo <span className="text-red-500">Ferrari</span>
                 </div>
-                <div className="text-xs text-gray-500 tracking-widest uppercase">Pilota ACI Sport</div>
+                <div className="text-xs text-gray-500 tracking-widest uppercase">Italian Racing Driver</div>
               </div>
             </div>
             <p className="text-gray-500 text-sm leading-relaxed">
-              Passione, professionalità e voglia di vincere. Ogni gara è un'occasione per crescere.
+              Motorsport, crescita e partnership costruite con serietà dentro e fuori dalla pista.
             </p>
           </div>
 
@@ -36,7 +36,7 @@ export default function Footer() {
               {[
                 { href: "/", label: "Home" },
                 { href: "/chi-sono", label: "Chi Sono" },
-                { href: "/partner", label: "Diventa Partner" },
+                { href: "/partner", label: "Partnership" },
                 { href: "/galleria", label: "Galleria" },
                 { href: "/contatti", label: "Contatti" },
               ].map((l) => (
@@ -56,7 +56,7 @@ export default function Footer() {
             <h3 className="text-white font-semibold text-sm tracking-widest uppercase mb-5">Contatti</h3>
             <ul className="space-y-3">
               <li>
-                <a href="tel:3318975195" className="flex items-center gap-2 text-gray-500 hover:text-red-400 text-sm transition-colors">
+                <a href="tel:+393318975195" className="flex items-center gap-2 text-gray-500 hover:text-red-400 text-sm transition-colors">
                   <Phone size={14} className="text-red-500 shrink-0" />
                   +39 331 897 5195
                 </a>
@@ -69,7 +69,7 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-2 text-gray-500 text-sm">
                 <MapPin size={14} className="text-red-500 shrink-0" />
-                Piazza G. Agnelli 10, Roma, 00144
+                Roma, Italia
               </li>
             </ul>
           </div>
@@ -113,9 +113,12 @@ export default function Footer() {
           <p className="text-gray-600 text-xs">
             © {new Date().getFullYear()} Filippo Ferrari. Tutti i diritti riservati.
           </p>
-          <p className="text-gray-600 text-xs">
-            Pilota tesserato ACI Sport · Campionato Italiano Gran Turismo
-          </p>
+          <div className="flex items-center gap-4">
+            <Link href="/privacy">
+              <span className="text-gray-600 hover:text-red-400 text-xs transition-colors cursor-pointer">Privacy Policy</span>
+            </Link>
+            <p className="text-gray-600 text-xs">ACI Sport licensed · Roma, Italia</p>
+          </div>
         </div>
       </div>
     </footer>

@@ -12,12 +12,12 @@ const IMG5 = "https://dadcg8.webwave.dev/files/dynamicContent/sites/dadcg8/image
 const IMG6 = "https://dadcg8.webwave.dev/files/dynamicContent/sites/dadcg8/images/it/webpage_29/mm3aqdb1/element_722/rwdMode_1/550x460/IMG_5420.webp";
 
 const benefits = [
-  "Visibilità diretta in pista: logo sull'auto, sulla tuta, sul casco e sui materiali ufficiali.",
-  "Presenza sui media digitali: sito web, social network, comunicati stampa e contenuti dedicati.",
-  "Attività di co-branding: post, video e campagne condivise con il brand.",
-  "Esperienze esclusive: giornate in pista, eventi aziendali, hospitality nei weekend di gara.",
-  "Valorizzazione dell'immagine aziendale: il motorsport è sinonimo di eccellenza, performance e determinazione.",
-  "Networking e relazioni: accesso a un ambiente professionale e internazionale, dove le collaborazioni possono estendersi oltre il mondo delle corse.",
+  "Visibilità in pista definita in base al programma sportivo, agli spazi disponibili e agli accordi: vettura, abbigliamento e materiali dedicati.",
+  "Presenza digitale attraverso contenuti, social e comunicazione concordati con il partner.",
+  "Attività di co-branding: contenuti, video e iniziative costruite insieme al brand.",
+  "Attivazioni dedicate: quando previste dal programma, hospitality, eventi aziendali ed esperienze collegate al motorsport.",
+  "Valorizzazione dell'immagine aziendale attraverso un contesto legato a performance, precisione, tecnologia e competizione.",
+  "Networking e relazioni: possibilità di entrare in contatto con team, professionisti, aziende e realtà presenti nel motorsport.",
 ];
 
 const fiscalBenefits = [
@@ -129,10 +129,9 @@ export default function Partner() {
               <div className="space-y-4 text-gray-300 leading-relaxed">
                 <p>
                   È un <strong className="text-red-400">ecosistema di innovazione, performance
-                  e comunicazione</strong>. Ogni gara è un evento mediatico, con pubblico,
-                  stampa, social e un'immagine fortemente legata a valori positivi:{" "}
-                  <strong className="text-white">passione, tecnologia, precisione, ambizione
-                  e successo</strong>.
+                  e comunicazione</strong>. I weekend di gara uniscono pista, pubblico,
+                  contenuti digitali e relazioni in un contesto legato a valori come{" "}
+                  <strong className="text-white">passione, tecnologia, precisione e ambizione</strong>.
                 </p>
                 <p>
                   Sostenere la carriera di un pilota come{" "}
@@ -145,9 +144,9 @@ export default function Partner() {
                   .
                 </p>
                 <p>
-                  Chi sceglie di affiancarlo non fa solo pubblicità, ma entra a far parte di
-                  una <strong className="text-red-400">squadra</strong> che condivide obiettivi
-                  comuni: <strong className="text-white">vincere, crescere e distinguersi</strong>.
+                  Chi sceglie di affiancarlo entra in un <strong className="text-red-400">progetto condiviso</strong>,
+                  nel quale obiettivi sportivi e comunicazione vengono costruiti insieme con{" "}
+                  <strong className="text-white">chiarezza, continuità e attenzione al valore per il brand</strong>.
                 </p>
               </div>
               <div className="mt-8">
@@ -174,12 +173,11 @@ export default function Partner() {
             >
               <div className="divider-red mb-5" />
               <h2 className="text-3xl font-black text-white mb-3">
-                Cosa offro ai{" "}
-                <span className="text-gradient">miei partner</span>
+                Cosa può includere una{" "}
+                <span className="text-gradient">partnership</span>
               </h2>
               <p className="text-gray-400 mb-8 leading-relaxed">
-                Ogni collaborazione è costruita su misura: non c'è una semplice esposizione del
-                marchio, ma una vera sinergia di visibilità e valore.
+                Ogni collaborazione viene costruita su misura. Visibilità, contenuti e attivazioni vengono definiti in base al programma sportivo, agli obiettivi del partner e alle opportunità realmente disponibili.
               </p>
               <ul className="space-y-4">
                 {benefits.map((b, i) => (
@@ -437,7 +435,7 @@ export default function Partner() {
             >
               <div className="divider-red mb-5" />
               <h2 className="text-3xl font-black text-white mb-4">
-                I nostri <span className="text-gradient">valori</span>
+                I <span className="text-gradient">valori</span> del progetto
               </h2>
               <div className="space-y-4 text-gray-300 leading-relaxed">
                 <p>
@@ -452,9 +450,9 @@ export default function Partner() {
                   la tua azienda non è un semplice sponsor, ma una parte attiva della squadra.
                 </p>
                 <p>
-                  Sostenere la carriera di una giovane promessa significa unire passione,
-                  competenza, serietà e impegno in un percorso comune di{" "}
-                  <strong className="text-white">visibilità, crescita e risultati concreti</strong>.
+                  Affiancare un giovane pilota significa unire passione, competenza, serietà
+                  e impegno in un percorso comune fatto di{" "}
+                  <strong className="text-white">visibilità, contenuti e attivazioni condivise</strong>.
                 </p>
               </div>
             </div>

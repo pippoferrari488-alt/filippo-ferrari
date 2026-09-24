@@ -3,11 +3,13 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import SeoManager from "@/components/SeoManager";
 import Home from "@/pages/Home";
 import ChiSono from "@/pages/ChiSono";
 import Partner from "@/pages/Partner";
 import Galleria from "@/pages/Galleria";
 import Contatti from "@/pages/Contatti";
+import Privacy from "@/pages/Privacy";
 import NotFound from "@/pages/not-found";
 
 const queryClient = new QueryClient();
@@ -24,6 +26,7 @@ function Router() {
   return (
     <div className="min-h-screen flex flex-col bg-[hsl(var(--background))]">
       <ScrollToTop />
+      <SeoManager />
       <Navbar />
       <main className="flex-1">
         <Switch>
@@ -32,6 +35,7 @@ function Router() {
           <Route path="/partner" component={Partner} />
           <Route path="/galleria" component={Galleria} />
           <Route path="/contatti" component={Contatti} />
+          <Route path="/privacy" component={Privacy} />
           <Route component={NotFound} />
         </Switch>
       </main>

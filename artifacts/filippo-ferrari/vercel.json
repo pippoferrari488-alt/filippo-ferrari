@@ -1,3 +1,28 @@
 {
-  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
+  "rewrites": [
+    {
+      "source": "/chi-sono",
+      "destination": "/chi-sono/index.html"
+    },
+    {
+      "source": "/partner",
+      "destination": "/partner/index.html"
+    },
+    {
+      "source": "/galleria",
+      "destination": "/galleria/index.html"
+    },
+    {
+      "source": "/contatti",
+      "destination": "/contatti/index.html"
+    },
+    {
+      "source": "/privacy",
+      "destination": "/privacy/index.html"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
 }
