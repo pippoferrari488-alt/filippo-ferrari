@@ -67,7 +67,7 @@ export default function Contatti() {
         <div className="absolute inset-0 bg-cover bg-no-repeat"
           style={{
             backgroundImage: `url(${HERO_BG})`,
-            backgroundPosition: "38% center",
+            backgroundPosition: "38% 58%",
           }} />
         <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-transparent" />
         <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-red-700 via-red-500 to-red-700" />
