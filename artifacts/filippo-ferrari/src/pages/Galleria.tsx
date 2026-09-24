@@ -123,12 +123,10 @@ export default function Galleria() {
     <>
       <section className="relative h-[40vh] min-h-[280px] flex items-end overflow-hidden">
         <div
-          className="absolute inset-0"
+          className="absolute inset-0 bg-cover bg-no-repeat"
           style={{
-            backgroundImage: `url(${HERO_BG}), url(${HERO_BG})`,
-            backgroundSize: "auto 92%, cover",
-            backgroundPosition: "center bottom, center center",
-            backgroundRepeat: "no-repeat, no-repeat",
+            backgroundImage: `url(${HERO_BG})`,
+            backgroundPosition: "38% center",
           }}
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/55 to-transparent" />
