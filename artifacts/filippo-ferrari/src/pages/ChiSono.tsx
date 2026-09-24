@@ -57,7 +57,7 @@ export default function ChiSono() {
         <div className="absolute inset-0 bg-cover bg-no-repeat"
           style={{
             backgroundImage: `url(${HERO_BG})`,
-            backgroundPosition: "38% 58%",
+            backgroundPosition: "38% 62%",
           }} />
         <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/55 to-black/20" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-black/20" />
