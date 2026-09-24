@@ -84,8 +84,13 @@ export default function Partner() {
       {/* Hero */}
       <section className="relative h-[40vh] min-h-[280px] flex items-end overflow-hidden">
         <div
-          className="absolute inset-0 bg-cover bg-no-repeat"
-          style={{ backgroundImage: `url(${HERO_BG})`, backgroundPosition: "center bottom" }}
+          className="absolute inset-0"
+          style={{
+            backgroundImage: `url(${HERO_BG}), url(${HERO_BG})`,
+            backgroundSize: "auto 92%, cover",
+            backgroundPosition: "center bottom, center center",
+            backgroundRepeat: "no-repeat, no-repeat",
+          }}
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-transparent" />
         <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-red-700 via-red-500 to-red-700" />
