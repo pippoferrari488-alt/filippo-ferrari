@@ -491,7 +491,7 @@ export default function Partner() {
       <section className="relative py-28 overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(https://i.imgur.com/pQq4QNY.jpeg)` }}
+          style={{ backgroundImage: `url(/site-assets/partner-cta.jpeg)` }}
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/70 to-black/85" />
         <div className="relative z-10 max-w-3xl mx-auto px-4 text-center">
