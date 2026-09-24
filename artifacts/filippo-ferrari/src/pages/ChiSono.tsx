@@ -54,7 +54,7 @@ export default function ChiSono() {
   return (
     <>
       <section className="relative h-[48vh] min-h-[320px] flex items-end justify-start overflow-hidden">
-        <div className="absolute inset-0 bg-contain bg-center bg-no-repeat bg-black" style={{ backgroundImage: `url(${HERO_BG})` }} />
+        <div className="absolute inset-0 bg-cover bg-no-repeat" style={{ backgroundImage: `url(${HERO_BG})`, backgroundPosition: "center bottom" }} />
         <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/55 to-black/20" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-black/20" />
         <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-red-500 to-transparent" />
