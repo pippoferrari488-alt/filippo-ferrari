@@ -3,7 +3,7 @@ import { X, ChevronLeft, ChevronRight } from "lucide-react";
 import { useIntersection } from "@/hooks/useIntersection";
 
 const HERO_BG =
-  "https://dadcg8.webwave.dev/files/dynamicContent/sites/dadcg8/images/it/webpage_31/mm3aqecy/element_815/rwdMode_1/2400x420/a-race-car-driving-down-a-race-track.webp";
+  "/site-assets/internal-hero.webp";
 
 const images = [
   "/gallery/audi-r8-gt3/01_99_cola_moncini_vanberlo_401-XL.jpg",

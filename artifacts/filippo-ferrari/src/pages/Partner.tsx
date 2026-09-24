@@ -3,13 +3,13 @@ import { Link } from "wouter";
 import { ArrowRight, CheckCircle, QrCode } from "lucide-react";
 import { useIntersection } from "@/hooks/useIntersection";
 
-const HERO_BG = "https://dadcg8.webwave.dev/files/dynamicContent/sites/dadcg8/images/it/webpage_31/mm3aqecy/element_815/rwdMode_1/2400x420/a-race-car-driving-down-a-race-track.webp";
-const IMG1 = "https://dadcg8.webwave.dev/files/dynamicContent/sites/dadcg8/images/it/webpage_29/mm3aqdb1/element_776/99_cola_moncini_vanberlo_105-XL.jpg";
-const IMG2 = "https://dadcg8.webwave.dev/files/dynamicContent/sites/dadcg8/images/it/webpage_29/mm3aqdb1/element_839/rwdMode_1/426x291/00_grid_119-S.webp";
-const IMG3 = "https://dadcg8.webwave.dev/files/dynamicContent/sites/dadcg8/images/it/webpage_29/mm3aqdb1/element_719/rwdMode_1/563x450/podio_1013-X2.webp";
-const IMG4 = "https://dadcg8.webwave.dev/files/dynamicContent/sites/dadcg8/images/it/webpage_29/mm3aqdb1/element_783/IMG_5474.jpeg";
-const IMG5 = "https://dadcg8.webwave.dev/files/dynamicContent/sites/dadcg8/images/it/webpage_29/mm3aqdb1/element_840/rwdMode_1/526x357/99_cola-moncini_2011-XL.webp";
-const IMG6 = "https://dadcg8.webwave.dev/files/dynamicContent/sites/dadcg8/images/it/webpage_29/mm3aqdb1/element_722/rwdMode_1/550x460/IMG_5420.webp";
+const HERO_BG = "/site-assets/internal-hero.webp";
+const IMG1 = "/site-assets/partner-main.jpg";
+const IMG2 = "/site-assets/partner-grid.webp";
+const IMG3 = "/site-assets/partner-podium.webp";
+const IMG4 = "/site-assets/partner-track.jpeg";
+const IMG5 = "/site-assets/partner-commercial.webp";
+const IMG6 = "/site-assets/partner-values.webp";
 
 const benefits = [
   "Visibilità in pista definita in base al programma sportivo, agli spazi disponibili e agli accordi: vettura, abbigliamento e materiali dedicati.",

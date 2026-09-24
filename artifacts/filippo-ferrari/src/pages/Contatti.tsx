@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Phone, Mail, MapPin, Instagram, ChevronDown } from "lucide-react";
 import { useIntersection } from "@/hooks/useIntersection";
 
-const HERO_BG = "https://dadcg8.webwave.dev/files/dynamicContent/sites/dadcg8/images/it/webpage_31/mm3aqecy/element_815/rwdMode_1/2400x420/a-race-car-driving-down-a-race-track.webp";
+const HERO_BG = "/site-assets/internal-hero.webp";
 
 const faqs = [
   { q: "Come posso seguire Filippo Ferrari?", a: "Il sito raccoglie il profilo e le principali tappe del percorso; per gli aggiornamenti più frequenti puoi seguire i canali Instagram e TikTok." },

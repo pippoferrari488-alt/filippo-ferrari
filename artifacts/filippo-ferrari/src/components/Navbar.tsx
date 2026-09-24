@@ -37,7 +37,7 @@ export default function Navbar() {
           <Link href="/">
             <div className="flex items-center gap-3 cursor-pointer group">
               <img
-                src="https://i.imgur.com/1TSIWDC.png"
+                src="/site-assets/logo.png"
                 alt="Filippo Ferrari Logo"
                 className="h-10 w-auto object-contain"
                 onError={(e) => {

@@ -1,14 +1,14 @@
 import { Link } from "wouter";
 import { useIntersection } from "@/hooks/useIntersection";
 
-const HERO_BG = "https://dadcg8.webwave.dev/files/dynamicContent/sites/dadcg8/images/it/webpage_31/mm3aqecy/element_815/rwdMode_1/2400x420/a-race-car-driving-down-a-race-track.webp";
-const BANNER_IMG = "https://i.imgur.com/uxCD3UP.jpeg";
+const HERO_BG = "/site-assets/internal-hero.webp";
+const BANNER_IMG = "/site-assets/profile-banner.jpeg";
 
 const topImages = [
-  "https://dadcg8.webwave.dev/files/dynamicContent/sites/dadcg8/images/it/webpage_31/mm3aqecy/element_829/rwdMode_1/492x273/IMG_0030.webp",
-  "https://dadcg8.webwave.dev/files/dynamicContent/sites/dadcg8/images/it/webpage_31/mm3aqecy/element_833/rwdMode_1/308x282/IMG_3647.webp",
-  "https://dadcg8.webwave.dev/files/dynamicContent/sites/dadcg8/images/it/webpage_31/mm3aqecy/element_834/rwdMode_1/582x309/4018ABFF-E0BD-430A-8856-8D2CBB3D9F7D.webp",
-  "https://dadcg8.webwave.dev/files/dynamicContent/sites/dadcg8/images/it/webpage_31/mm3aqecy/element_832/rwdMode_1/369x348/IMG_5469.webp",
+  "/site-assets/profile-kart.webp",
+  "/site-assets/profile-clio.webp",
+  "/site-assets/profile-wolf.webp",
+  "/site-assets/profile-audi.webp",
 ];
 
 const carImages = [

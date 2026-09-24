@@ -4,8 +4,8 @@ import { ChevronDown } from "lucide-react";
 import { useIntersection } from "@/hooks/useIntersection";
 
 const HERO_BG = "/gallery/audi-r8-gt3/09_IMG_0927.jpg";
-const ABOUT_IMG = "https://dadcg8.webwave.dev/files/dynamicContent/sites/dadcg8/images/it/webpage_24/mm3aqfui/element_623/rwdMode_1/576x756/IMG_5399.webp";
-const PARTNER_BG = "https://dadcg8.webwave.dev/files/dynamicContent/sites/dadcg8/images/it/webpage_24/mm3aqfui/element_751/0/rwdMode_1/2400x490/99_cola_moncini_vanberlo_105-XL.jpg";
+const ABOUT_IMG = "/site-assets/home-about.webp";
+const PARTNER_BG = "/site-assets/home-partner-bg.jpg";
 
 const stats = [
   { value: "2005", label: "Anno di nascita" },

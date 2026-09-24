@@ -10,7 +10,7 @@ export default function Footer() {
           <div className="md:col-span-1">
             <div className="flex items-center gap-3 mb-4">
               <img
-                src="https://i.imgur.com/1TSIWDC.png"
+                src="/site-assets/logo.png"
                 alt="Logo"
                 className="h-10 w-auto"
                 onError={(e) => {
