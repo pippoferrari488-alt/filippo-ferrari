@@ -56,7 +56,7 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop nav */}
-          <nav className="hidden md:flex items-center gap-1">
+          <nav className="hidden lg:flex items-center gap-1">
             {navLinks.map((l) => (
               <Link key={l.href} href={l.href}>
                 <span
@@ -80,7 +80,7 @@ export default function Navbar() {
           {/* Mobile menu button */}
           <button
             onClick={() => setOpen(!open)}
-            className="md:hidden p-2 text-gray-300 hover:text-white"
+            className="lg:hidden p-2 text-gray-300 hover:text-white"
             aria-label="Menu"
           >
             {open ? <X size={22} /> : <Menu size={22} />}
@@ -90,7 +90,7 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       {open && (
-        <div className="md:hidden mobile-menu-enter nav-glass border-t border-white/10">
+        <div className="lg:hidden mobile-menu-enter nav-glass border-t border-white/10">
           <nav className="px-4 pt-2 pb-4 flex flex-col gap-1">
             {navLinks.map((l) => (
               <Link key={l.href} href={l.href}>
