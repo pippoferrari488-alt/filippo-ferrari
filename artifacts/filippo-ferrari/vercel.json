@@ -1,6 +1,11 @@
 {
   "redirects": [
     {
+      "source": "/",
+      "destination": "https://filippo-ferrari-official.vercel.app/",
+      "permanent": true
+    },
+    {
       "source": "/:path*",
       "destination": "https://filippo-ferrari-official.vercel.app/:path*",
       "permanent": true
