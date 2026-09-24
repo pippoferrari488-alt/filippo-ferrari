@@ -79,8 +79,8 @@ export default function Contatti() {
 
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-16">
-            <div ref={formRef.ref as React.RefObject<HTMLDivElement>} className={`opacity-0 ${formRef.visible ? "animate-slideInLeft" : ""}`}>
+          <div className="grid lg:grid-cols-2 gap-16 items-stretch">
+            <div ref={formRef.ref as React.RefObject<HTMLDivElement>} className={`h-full flex flex-col opacity-0 ${formRef.visible ? "animate-slideInLeft" : ""}`}>
               <div className="divider-red mb-5" />
               <h2 className="text-3xl font-black text-white mb-2">Parliamone<span className="text-gradient">.</span></h2>
               <p className="text-gray-400 mb-8 text-sm">Per opportunità sportive, partnership, media e collaborazioni professionali.</p>
@@ -118,9 +118,12 @@ export default function Contatti() {
               )}
             </div>
 
-            <div ref={infoRef.ref as React.RefObject<HTMLDivElement>} className={`opacity-0 ${infoRef.visible ? "animate-slideInRight delay-200" : ""}`}>
+            <div ref={infoRef.ref as React.RefObject<HTMLDivElement>} className={`h-full flex flex-col opacity-0 ${infoRef.visible ? "animate-slideInRight delay-200" : ""}`}>
               <div className="divider-red mb-5" />
-              <h2 className="text-3xl font-black text-white mb-8">Contatti <span className="text-gradient">diretti</span></h2>
+              <h2 className="text-3xl font-black text-white mb-2">Contatti <span className="text-gradient">diretti</span></h2>
+              <p className="text-gray-400 mb-8 text-sm">
+                Telefono, email e canali social per contatti diretti.
+              </p>
               <div className="space-y-6 mb-10">
                 <div className="flex items-start gap-4 card-hover bg-[hsl(0_0%_7%)] border border-white/5 rounded-xl p-5">
                   <div className="w-10 h-10 rounded-full bg-red-600/20 flex items-center justify-center shrink-0"><Phone size={18} className="text-red-400" /></div>
@@ -135,7 +138,7 @@ export default function Contatti() {
                   <div><div className="text-gray-500 text-xs uppercase tracking-widest mb-1">Base</div><span className="text-white font-semibold">Roma, Italia</span></div>
                 </div>
               </div>
-              <div>
+              <div className="lg:mt-auto lg:pt-4">
                 <h3 className="text-white font-semibold text-sm tracking-widest uppercase mb-5">Seguimi</h3>
                 <div className="flex gap-4">
                   <a href="https://www.instagram.com/__filippo.ferrari__" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 px-5 py-3 bg-white/5 border border-white/10 hover:bg-red-600 hover:border-red-600 rounded-xl text-white text-sm font-medium transition-all"><Instagram size={18} />Instagram</a>
