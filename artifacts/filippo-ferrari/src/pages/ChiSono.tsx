@@ -120,17 +120,17 @@ export default function ChiSono() {
         </div>
       </section>
 
-      <section className="relative h-72 md:h-80 overflow-hidden">
-        <img src={BANNER_IMG} alt="Filippo in pista" className="img-cover" />
+      <section className="relative min-h-[390px] md:h-80 md:min-h-0 overflow-hidden bg-black">
+        <img src={BANNER_IMG} alt="Filippo in pista" className="w-full h-full object-contain object-center md:object-cover" />
         <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/65 to-black/80 flex items-center">
           <div className="max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-2xl">
               <div className="text-xs uppercase tracking-[0.22em] text-red-400 font-semibold mb-3">Opportunities</div>
               <h3 className="text-2xl md:text-4xl font-black text-white mb-4 leading-tight">Il prossimo passo nasce dalle opportunità giuste.</h3>
-              <p className="text-gray-300 mb-6 leading-relaxed">Per programmi sportivi, collaborazioni professionali e partnership nel motorsport.</p>
-              <div className="flex flex-col sm:flex-row gap-3">
-                <Link href="/contatti"><span className="inline-block px-7 py-3 btn-red rounded font-semibold cursor-pointer text-center">Contatti</span></Link>
-                <Link href="/partner"><span className="inline-block px-7 py-3 bg-white/10 border border-white/20 hover:bg-white/15 text-white rounded font-semibold cursor-pointer transition-all text-center">Partnership</span></Link>
+              <p className="text-gray-300 mb-6 text-sm md:text-base leading-relaxed">Per programmi sportivi, collaborazioni professionali e partnership nel motorsport.</p>
+              <div className="flex flex-col md:flex-row gap-3">
+                <Link href="/contatti"><span className="inline-block w-full md:w-auto px-7 py-3 btn-red rounded font-semibold cursor-pointer text-center">Contatti</span></Link>
+                <Link href="/partner"><span className="inline-block w-full md:w-auto px-7 py-3 bg-white/10 border border-white/20 hover:bg-white/15 text-white rounded font-semibold cursor-pointer transition-all text-center">Partnership</span></Link>
               </div>
             </div>
           </div>
