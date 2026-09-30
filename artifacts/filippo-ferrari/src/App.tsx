@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import SeoManager from "@/components/SeoManager";
+import { LanguageProvider, TranslationLayer } from "@/i18n/Language";
 import Home from "@/pages/Home";
 import ChiSono from "@/pages/ChiSono";
 import Partner from "@/pages/Partner";
@@ -16,9 +17,11 @@ const queryClient = new QueryClient();
 
 function ScrollToTop() {
   const [location] = useLocation();
+
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "instant" });
   }, [location]);
+
   return null;
 }
 
@@ -26,6 +29,7 @@ function Router() {
   return (
     <div className="min-h-screen flex flex-col bg-[hsl(var(--background))]">
       <ScrollToTop />
+      <TranslationLayer />
       <SeoManager />
       <Navbar />
       <main className="flex-1">
@@ -47,9 +51,11 @@ function Router() {
 function App() {
   return (
     <QueryClientProvider client={queryClient}>
-      <WouterRouter base={import.meta.env.BASE_URL.replace(/\/$/, "")}>
-        <Router />
-      </WouterRouter>
+      <LanguageProvider>
+        <WouterRouter base={import.meta.env.BASE_URL.replace(/\/$/, "")}>
+          <Router />
+        </WouterRouter>
+      </LanguageProvider>
     </QueryClientProvider>
   );
 }

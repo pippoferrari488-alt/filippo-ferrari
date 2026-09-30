@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "wouter";
 import { Menu, X } from "lucide-react";
+import { useLanguage } from "@/i18n/Language";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -9,6 +10,45 @@ const navLinks = [
   { href: "/galleria", label: "Galleria" },
   { href: "/contatti", label: "Contatti" },
 ];
+
+function LanguageToggle({ mobile = false }: { mobile?: boolean }) {
+  const { language, setLanguage } = useLanguage();
+
+  return (
+    <div
+      className={`inline-flex items-center rounded-lg border border-white/10 bg-black/25 p-1 ${
+        mobile ? "w-fit mt-2 mb-1" : "ml-2"
+      }`}
+      aria-label="Language selector"
+    >
+      <button
+        type="button"
+        onClick={() => setLanguage("it")}
+        aria-pressed={language === "it"}
+        className={`px-2.5 py-1 rounded-md text-[11px] font-bold tracking-wider transition-all ${
+          language === "it"
+            ? "bg-red-600 text-white"
+            : "text-gray-400 hover:text-white"
+        }`}
+      >
+        IT
+      </button>
+
+      <button
+        type="button"
+        onClick={() => setLanguage("en")}
+        aria-pressed={language === "en"}
+        className={`px-2.5 py-1 rounded-md text-[11px] font-bold tracking-wider transition-all ${
+          language === "en"
+            ? "bg-red-600 text-white"
+            : "text-gray-400 hover:text-white"
+        }`}
+      >
+        EN
+      </button>
+    </div>
+  );
+}
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -33,7 +73,6 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
-          {/* Logo */}
           <Link href="/">
             <div className="flex items-center gap-3 cursor-pointer group">
               <img
@@ -55,7 +94,6 @@ export default function Navbar() {
             </div>
           </Link>
 
-          {/* Desktop nav */}
           <nav className="hidden lg:flex items-center gap-1">
             {navLinks.map((l) => (
               <Link key={l.href} href={l.href}>
@@ -70,14 +108,16 @@ export default function Navbar() {
                 </span>
               </Link>
             ))}
+
+            <LanguageToggle />
+
             <Link href="/partner">
-              <span className="ml-4 px-5 py-2 btn-red rounded text-sm font-semibold cursor-pointer">
+              <span className="ml-2 px-5 py-2 btn-red rounded text-sm font-semibold cursor-pointer">
                 Diventa Partner
               </span>
             </Link>
           </nav>
 
-          {/* Mobile menu button */}
           <button
             onClick={() => setOpen(!open)}
             className="lg:hidden p-2 text-gray-300 hover:text-white"
@@ -88,7 +128,6 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Mobile menu */}
       {open && (
         <div className="lg:hidden mobile-menu-enter nav-glass border-t border-white/10">
           <nav className="px-4 pt-2 pb-4 flex flex-col gap-1">
@@ -105,6 +144,9 @@ export default function Navbar() {
                 </span>
               </Link>
             ))}
+
+            <LanguageToggle mobile />
+
             <Link href="/partner">
               <span className="block mt-2 px-4 py-3 btn-red rounded text-sm font-semibold text-center cursor-pointer">
                 Diventa Partner
